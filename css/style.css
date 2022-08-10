@@ -1,0 +1,93 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+nav{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0 10px;
+}
+
+nav ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 40px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 22px;
+}
+
+nav ul li a:hover{
+    color: aqua;
+}
+
+.my-img{
+    width: 1000px;
+    position: absolute;
+    left: 8%;
+    bottom: 0;
+}
+
+.title{
+    height: 100vh;
+    width: 100%;
+    background-color: #1a1a1a;
+}
+
+.title-content{
+    padding-top: 15%;
+    padding-left: 35%;
+}
+
+.title h1{
+    font-size: 120px;
+    color: #3c3c3c;
+    font-weight: 800;
+
+}
+span{
+    color: #d9d6d6;
+    /*letter-spacing: 2px;*/
+}
+
+.title h2{
+    color: #EBF004;
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+}
+
+.color{
+    height: 60px;
+    background: rgb(164, 154, 154);
+    transition: 0.3s;
+}
+
+.about-title{
+    margin: 40px 0px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+}
+
