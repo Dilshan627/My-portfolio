@@ -8,22 +8,18 @@
     <title>case_2</title>
     <link rel="stylesheet" href="css/normalize.css">
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
         body > header {
             position: relative;
             height: 50px;
             margin: 0;
+            padding: 0;
             box-shadow: 6px 2px 8px 2px #1c1717c8;
         }
 
         .topHeader {
             position: absolute;;
             padding: 0;
+            margin-top: 0;
             top: 20px;
             right: 20px;
         }
@@ -31,30 +27,37 @@
         .topHeader>li {
             display: inline;
             padding: 10px;
-            font-size: 15px;
+            font-size: 20px;
             cursor: pointer;
         }
-
-        .leftHeader{
-            width: 250px;
-            background-color: purple;
+        .left{
             position: absolute;
+            background: purple;
+            width: 200px;
             top: 50px;
             left: 0;
             bottom: 0;
         }
-        .leftHeader>ul{
-            margin: 0;
-            padding-left: 10px;
-            padding-top: 15px;
+
+        .leftHeader{
+            position: absolute;
             color: white;
         }
-        .leftHeader>ui>li{
+        .leftHeader>li{
             display: block;
             padding: 10px;
             font-size: 20px;
         }
 
+        .data{
+            position: absolute;
+            left: 200px;
+        }
+        .image{
+            display: flex;
+            width: 212px;
+            height: 212px;
+        }
 
         footer {
             position: absolute;
@@ -62,13 +65,13 @@
             bottom: 0;
             height: 40px;
             width: 100%;
-            background-color: rgb(70, 66, 66);
+            background-color: grey;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-
         }
+
 
     </style>
 </head>
@@ -82,17 +85,33 @@
             <li>About Us</li>
         </ul>
     </section>
-    <section class="leftHeader">
-        <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Contacts</li>
-            <li>About Us</li>
-        </ul>
-    </section>
 </header>
 <main>
 
+    <section>
+        <aside class="left">
+            <ul class="leftHeader">
+                <li>Home</li>
+                <li>Services</li>
+                <li>Contacts</li>
+                <li>About Us</li>
+            </ul>
+        </aside>
+        <aside class="data">
+            <div class="image">
+                <img src="assests/gif.webp">
+                <img src="assests/gif.webp">
+                <img src="assests/gif.webp">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum nihil fuga adipisci repellendus ducimus autem hic nesciunt! Consectetur quam quos optio, voluptas totam odio dolorem soluta quo unde eos natus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum nihil fuga adipisci repellendus ducimus autem hic nesciunt! Consectetur quam quos optio, voluptas totam odio dolorem soluta quo unde eos natus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum nihil fuga adipisci repellendus ducimus autem hic nesciunt! Consectetur quam quos optio, voluptas totam odio dolorem soluta quo unde eos natus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum nihil fuga adipisci repellendus ducimus autem hic nesciunt! Consectetur quam quos optio, voluptas totam odio dolorem soluta quo unde eos natus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum nihil fuga adipisci repellendus ducimus autem hic nesciunt! Consectetur quam quos optio, voluptas totam odio dolorem soluta quo unde eos natus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum nihil fuga adipisci repellendus ducimus autem hic nesciunt! Consectetur quam quos optio, voluptas totam odio dolorem soluta quo unde eos natus?</p>
+
+        </aside>
+    </section>
 
 
 
