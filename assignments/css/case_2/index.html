@@ -8,10 +8,96 @@
     <title>case_2</title>
     <link rel="stylesheet" href="css/normalize.css">
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body > header {
+            position: relative;
+            height: 50px;
+            margin: 0;
+            box-shadow: 6px 2px 8px 2px #1c1717c8;
+        }
+
+        .topHeader {
+            position: absolute;;
+            padding: 0;
+            top: 20px;
+            right: 20px;
+        }
+
+        .topHeader>li {
+            display: inline;
+            padding: 10px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .leftHeader{
+            width: 250px;
+            background-color: purple;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            bottom: 0;
+        }
+        .leftHeader>ul{
+            margin: 0;
+            padding-left: 10px;
+            padding-top: 15px;
+            color: white;
+        }
+        .leftHeader>ui>li{
+            display: block;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+
+        footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 40px;
+            width: 100%;
+            background-color: rgb(70, 66, 66);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+
+        }
 
     </style>
 </head>
 <body>
+<header>
+    <section >
+        <ul class="topHeader">
+            <li>Home</li>
+            <li>Services</li>
+            <li>Contacts</li>
+            <li>About Us</li>
+        </ul>
+    </section>
+    <section class="leftHeader">
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Contacts</li>
+            <li>About Us</li>
+        </ul>
+    </section>
+</header>
+<main>
 
+
+
+
+
+</main>
+<footer>Developed By IJSE</footer>
 </body>
 </html>
