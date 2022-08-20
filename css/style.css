@@ -7,24 +7,19 @@
     padding: 0;
 }
 
-body {
-    height: 100vh;
-    width: 100vw;
-    background-color: #1a1a1a;
-}
-
 body > header {
     position: relative;
     height: 50px;
     margin: 0;
     padding: 0;
 }
-
-body > header > nav {
+body > header > nav{
     position: fixed;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    height: 60px;
+    background: rgb(26, 26, 26);
 }
 
 body > header > nav > ul {
@@ -49,11 +44,20 @@ body > header > nav > ul > li > a {
 body > header > nav > ul > li > a:hover {
     color: aqua;
 }
-
-.sticky {
+.sticky{
     height: 60px;
     background: rgb(222, 22, 22);
     transition: 0.3s;
 }
-
+main{
+    height: 100vh;
+    width: 100vw;
+    background-color: #1a1a1a;
+}
+.photo{
+    position: relative;
+}
+.photo>img{
+    position: absolute;
+}
 
