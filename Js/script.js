@@ -2,7 +2,7 @@
 /*scroll navbar */
 window.addEventListener("scroll",function(){
     var nav = document.querySelector("nav");
-    nav.classList.toggle("color",window.scrollY > 0);
+    nav.classList.toggle("sticky",window.scrollY > 0);
 })
 
 /*auto type word*/

@@ -1,3 +1,59 @@
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #1a1a1a;
+}
+
+body > header {
+    position: relative;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+body > header > nav {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+body > header > nav > ul {
+    position: fixed;
+    padding: 0;
+    top: 20px;
+    right: 20px;
+}
+
+body > header > nav > ul > li {
+    display: inline;
+    padding: 20px;
+}
+
+body > header > nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+body > header > nav > ul > li > a:hover {
+    color: aqua;
+}
+
+.sticky {
+    height: 60px;
+    background: rgb(222, 22, 22);
+    transition: 0.3s;
+}
+
+
