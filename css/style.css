@@ -117,19 +117,52 @@ span {
     margin-bottom: 80px;
     height: 400px;
     width: 1040px;
-    left: 25%;
+    left: 24%;
     border-radius: 30px;
     box-shadow: 6px 6px 6px rgb(0 0 0 / 25%);
     background-color: rgba(200.00000327825546, 204.00000303983688, 231.00000143051147, 1);
 }
 
 #About > img {
-    left: 255px;
+    left: 210px;
     position: absolute;
     top: -65px;
 
 }
 
+#About > h1 {
+    font-size: 45px;
+    text-align: center;
+    padding: 20px;
+
+}
+
+#About > p {
+    position: absolute;
+    width: 600px;
+    left: 110px;
+    font-size: 27px;
+    margin-top: 25px;
+}
+
+#About > button {
+    position: absolute;
+    margin-top: 20%;
+    left: 110px;
+    background-color: rgba(41.00000135600567, 91.00000217556953, 127.00000002980232, 1);
+    width: 156px;
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+#About > button:hover{
+
+    border-color: aqua;
+}
 
 #Skills {
     position: relative;
