@@ -7,7 +7,7 @@ window.addEventListener("scroll",function(){
 
 /*auto type word*/
 var typed = new Typed(".input",{
-    strings:["DAMITHA DILSHAN",],
+    strings:["Full Stack Developer",],
     typeSpeed:120,
     backSpeed:90,
     loop: true

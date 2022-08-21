@@ -5,59 +5,88 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
 }
 
-body > header {
-    position: relative;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-}
-body > header > nav{
-    position: fixed;
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    height: 60px;
-    background: rgb(26, 26, 26);
-}
-
-body > header > nav > ul {
-    position: fixed;
-    padding: 0;
-    top: 20px;
-    right: 20px;
-}
-
-body > header > nav > ul > li {
-    display: inline;
-    padding: 20px;
-}
-
-body > header > nav > ul > li > a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    font-size: 20px;
-}
-
-body > header > nav > ul > li > a:hover {
-    color: aqua;
-}
-.sticky{
-    height: 60px;
-    background: rgb(222, 22, 22);
-    transition: 0.3s;
-}
-main{
+header {
     height: 100vh;
     width: 100vw;
     background-color: #1a1a1a;
-}
-.photo{
-    position: relative;
-}
-.photo>img{
-    position: absolute;
+    /*font-family: 'Poppins', sans-serif;*/
 }
 
+.logo {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 35px;
+    padding-left: 12%;
+    padding-right: 12%;
+    position: relative;
+    z-index: 5;
+}
+
+nav > ul > li {
+    list-style: none;
+    display: inline-block;
+    padding: 0px 25px;
+    z-index: 7;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+nav > ul > li > a:hover {
+    color: aqua;
+    transition: .3s;
+}
+
+.main-text {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    transform: translateY(-15%);
+}
+
+.main-text > h1 {
+    font-size: 100px;
+    color: #3c3c3c;
+    font-weight: 800;
+    line-height: 120px;
+}
+
+span {
+    color: yellow;
+    letter-spacing: 2px;
+}
+
+.main-img {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    bottom: 0;
+    right: 63%;
+    text-align: right;
+}
+
+.main-img > img {
+    height: 100%;
+}
+
+.social-media{
+position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+}
