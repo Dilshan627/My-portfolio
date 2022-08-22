@@ -264,16 +264,16 @@ span {
     position: relative;
     font-size: 36px;
     text-align: center;
-    padding: 20px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
+    padding-top: 50px;
 }
 
 #Project > h1:before {
     content: "";
     display: block;
-    width: 1330px;
-    height: 3px;
+    width: 1800px;
+    height: 2px;
     background: #a19d9d;
     position: absolute;
     left: 0;
