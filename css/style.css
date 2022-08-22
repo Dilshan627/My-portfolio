@@ -112,9 +112,9 @@ span {
 
 #About {
     position: relative;
-    margin-top: 80px;
+    margin-top: 100px;
     margin-bottom: 80px;
-    height: 400px;
+    height: 350px;
     width: 1040px;
     left: 24%;
     border-radius: 30px;
@@ -123,10 +123,10 @@ span {
 }
 
 #About > img {
-    left: 160px;
+    left: 285px;
     position: absolute;
-    top: -65px;
-
+    top: -48px;
+    width: 1000px;
 }
 
 #About > h1 {
@@ -140,13 +140,13 @@ span {
     position: absolute;
     width: 600px;
     left: 110px;
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 25px;
 }
 
 #About > button {
     position: absolute;
-    margin-top: 20%;
+    margin-top: 15%;
     left: 110px;
     background-color: rgba(41.00000135600567, 91.00000217556953, 127.00000002980232, 1);
     width: 156px;
