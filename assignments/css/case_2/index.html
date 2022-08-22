@@ -8,115 +8,161 @@
     <title>case_2</title>
     <link rel="stylesheet" href="css/normalize.css">
     <style>
-        body > header {
-            position: relative;
-            height: 50px;
-            margin: 0;
-            padding: 0;
-            box-shadow: 6px 2px 8px 2px #1c1717c8;
+        header {
+            background: white;
+            box-shadow: 0px -1px 8px 2px #1c1717e8;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            height: 73px;
+            z-index: 2;
         }
 
-        .topHeader {
-            position: absolute;;
-            padding: 0;
-            margin-top: 0;
-            top: 20px;
-            right: 20px;
+        header > nav {
+            position: absolute;
+            right: 40px;
+            top: 0;
         }
 
-        .topHeader>li {
-            display: inline;
-            padding: 10px;
-            font-size: 20px;
+        header > nav > ul > li {
+            display: inline-block;
             cursor: pointer;
+            padding: 10px;
+            color: rgba(46, 41, 41, 0.96);
+            font-size: 19px;
         }
-        .left{
+
+        main {
+            position: relative;
+            margin-top: 73px;
+        }
+
+        main > nav {
             position: absolute;
             background: purple;
-            width: 200px;
-            top: 50px;
-            left: 0;
+            top: 0;
             bottom: 0;
+            width: 270px;
         }
 
-        .leftHeader{
-            position: absolute;
+        main > nav > ul > li {
             color: white;
-        }
-        .leftHeader>li{
-            display: block;
-            padding: 10px;
-            font-size: 20px;
+            list-style: none;
+            padding-top: 40px;
+            font-size: 19px;
             cursor: pointer;
-        }
-
-        .data{
-            position: absolute;
-            left: 200px;
 
         }
-        .image{
-            display: flex;
-            width: 212px;
-            height: 212px;
+
+        header ul > li > a {
+            color: rgba(46, 41, 41, 0.96);
+            text-decoration: none;
+        }
+
+        main ul > li > a {
+            color: #ccffcd;
+            text-decoration: none;
+        }
+
+        main > section {
+            margin-left: 270px;
+            padding: 10px;
+        }
+
+        main > section p {
+            color: #433636f5;
         }
 
         footer {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 40px;
-            width: 100%;
-            background-color: grey;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
+            height: 60px;
+            background: #363030;
         }
 
+        footer > h4 {
+            text-align: center;
+            margin-top: 0;
+            padding-top: 20px;
+            color: #e5e5e5;
+            font-weight: lighter;
+        }
+
+        main > section > section:first-child {
+            height: 300px;
+            position: relative;
+        }
+
+        main > section > section:first-child > div {
+            height: 100%;
+            width: calc(100% / 3);
+            position: absolute;
+            border: 1px solid rgba(0, 0, 0, 0.33);
+        }
+
+        main > section > section:first-child > div:nth-child(1) {
+            background: url("assests/gif.webp");
+            left: 0;
+        }
+
+        main > section > section:first-child > div:nth-child(2) {
+            background: url("assests/gif.webp");
+            left: calc(100%/3);
+        }
+
+        main > section > section:first-child > div:nth-child(3) {
+            background: url("assests/gif.webp");
+            right: 0;
+        }
 
     </style>
 </head>
+
 <body>
+
 <header>
-    <section >
-        <ul class="topHeader">
-            <li>Home</li>
-            <li>Services</li>
-            <li>Contacts</li>
-            <li>About Us</li>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About Us</a></li>
         </ul>
-    </section>
+    </nav>
 </header>
+
 <main>
-
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
     <section>
-        <aside class="left">
-            <ul class="leftHeader">
-                <li>Home</li>
-                <li>Services</li>
-                <li>Contacts</li>
-                <li>About Us</li>
-            </ul>
-        </aside>
-        <aside class="data">
-            <div class="image">
-                <img src="assests/gif.webp">
-                <img src="assests/gif.webp">
-                <img src="assests/gif.webp">
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum nihil fuga adipisci repellendus ducimus autem hic nesciunt! Consectetur quam quos optio, voluptas totam odio dolorem soluta quo unde eos natus?</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum nihil fuga adipisci repellendus ducimus autem hic nesciunt! Consectetur quam quos optio, voluptas totam odio dolorem soluta quo unde eos natus?</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum nihil fuga adipisci repellendus ducimus autem hic nesciunt! Consectetur quam quos optio, voluptas totam odio dolorem soluta quo unde eos natus?</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum nihil fuga adipisci repellendus ducimus autem hic nesciunt! Consectetur quam quos optio, voluptas totam odio dolorem soluta quo unde eos natus?</p>
-
-        </aside>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate expedita totam enim magni, ipsum possimus vel eligendi explicabo aliquam nulla quasi, quia libero quas distinctio asperiores illo exercitationem qui eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate expedita totam enim magni, ipsum possimus vel eligendi explicabo aliquam nulla quasi, quia libero quas distinctio asperiores illo exercitationem qui eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate expedita totam enim magni, ipsum possimus vel eligendi explicabo aliquam nulla quasi, quia libero quas distinctio asperiores illo exercitationem qui eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate expedita totam enim magni, ipsum possimus vel eligendi explicabo aliquam nulla quasi, quia libero quas distinctio asperiores illo exercitationem qui eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate expedita totam enim magni, ipsum possimus vel eligendi explicabo aliquam nulla quasi, quia libero quas distinctio asperiores illo exercitationem qui eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate expedita totam enim magni, ipsum possimus vel eligendi explicabo aliquam nulla quasi, quia libero quas distinctio asperiores illo exercitationem qui eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate expedita totam enim magni, ipsum possimus vel eligendi explicabo aliquam nulla quasi, quia libero quas distinctio asperiores illo exercitationem qui eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate expedita totam enim magni, ipsum possimus vel eligendi explicabo aliquam nulla quasi, quia libero quas distinctio asperiores illo exercitationem qui eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate expedita totam enim magni, ipsum possimus vel eligendi explicabo aliquam nulla quasi, quia libero quas distinctio asperiores illo exercitationem qui eum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate expedita totam enim magni, ipsum possimus vel eligendi explicabo aliquam nulla quasi, quia libero quas distinctio asperiores illo exercitationem qui eum?</p>
+        </section>
     </section>
-
-
-
-
 </main>
-<footer>Developed By IJSE</footer>
+
+<footer>
+    <h4>Developed By IJSE @ 2022</h4>
+</footer>
+
 </body>
+
 </html>
