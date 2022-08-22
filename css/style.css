@@ -130,9 +130,10 @@ span {
 }
 
 #About > h1 {
-    font-size: 45px;
+    font-size: 36px;
     text-align: center;
     padding: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 #About > p {
@@ -163,21 +164,32 @@ span {
 #Education {
     margin-top: 150px;
     position: relative;
-    height: 400px;
+    height: 800px;
     width: 50vw;
     display: inline-block;
 }
+
 #Education > h1 {
     font-size: 36px;
     text-align: center;
     padding: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
+#Education > h1 > img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+#Education > img {
+    width: 300px;
+}
 
 #Skills {
     margin-top: 150px;
     position: absolute;
-    height: 400px;
+    height: 800px;
     width: 50vw;
     display: inline-block;
     right: 0;
@@ -187,4 +199,12 @@ span {
     font-size: 36px;
     text-align: center;
     padding: 20px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+#Skills > h1 > img {
+    width: 50px;
+    height: 50px;
+    margin-right: -8px;
 }
