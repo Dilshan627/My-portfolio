@@ -190,6 +190,7 @@ span {
     text-align: center;
     padding: 20px;
     font-family: 'Poppins', sans-serif;
+    margin-bottom: 100px;
 }
 
 #Education > h1:before {
@@ -220,8 +221,24 @@ span {
     margin-right: 10px;
 }
 
-#Education > img {
-    width: 300px;
+#Education > div {
+    left: 25%;
+    padding: 3px 0 27px 22px;
+    margin-top: -8px;
+    border-left: 2px solid #82909c;
+    position: relative;
+}
+
+#Education > div:before{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #fff;
+    border: 2px solid #82909c;
 }
 
 #Skills {
