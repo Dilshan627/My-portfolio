@@ -12,7 +12,6 @@ header {
     height: 100vh;
     width: 99vw;
     background-color: #1a1a1a;
-    /*font-family: 'Poppins', sans-serif;*/
 }
 
 .logo {
@@ -49,7 +48,7 @@ nav > ul > li > a {
 
 nav > ul > li > a:hover {
     color: aqua;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .sticky {
@@ -100,7 +99,7 @@ span {
 .social-media {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 10px;
     text-align: right;
     padding: 10px 24px;
 }
@@ -108,35 +107,51 @@ span {
 .social-media > a {
     padding: 0 4px;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.social-media > a > i {
+    font-size: 35px;
+    color: white;
+    margin-right: 8px;
+}
+
+.social-media > a > i:hover {
+    color: aqua;
 }
 
 #About {
     position: relative;
-    margin-top: 100px;
-    margin-bottom: 80px;
-    height: 350px;
-    width: 1040px;
-    left: 24%;
-    border-radius: 30px;
-    box-shadow: 6px 6px 6px rgb(0 0 0 / 25%);
-    background-color: rgba(200.00000327825546, 204.00000303983688, 231.00000143051147, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
 }
 
-#About > img {
+#About > div {
+    position: absolute;
+    height: 350px;
+    width: calc(100% / 2);
+    border-radius: 30px;
+    box-shadow: 6px 6px 6px rgb(0 0 0 / 25%);
+    background: #C8CCE7;
+}
+
+#About > div > img {
     left: 285px;
     position: absolute;
     top: -48px;
     width: 1000px;
 }
 
-#About > h1 {
+#About > div > h1 {
     font-size: 36px;
     text-align: center;
     padding: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
-#About > p {
+#About > div > p {
     position: absolute;
     width: 600px;
     left: 110px;
@@ -144,7 +159,7 @@ span {
     margin-top: 25px;
 }
 
-#About > button {
+#About > div > button {
     position: absolute;
     margin-top: 15%;
     left: 110px;
@@ -157,7 +172,7 @@ span {
     cursor: pointer;
 }
 
-#About > button:hover {
+#About > div > button:hover {
     border-color: aqua;
 }
 
