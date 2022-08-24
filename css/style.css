@@ -97,26 +97,32 @@ span {
 
 .social-media {
     position: absolute;
-    right: 0;
-    bottom: 10px;
-    text-align: right;
-    padding: 10px 24px;
+    right: 8px;
+    bottom: 0;
 }
 
-.social-media > a {
-    padding: 0 4px;
-    cursor: pointer;
-    text-decoration: none;
+.social-media > ul {
+    display: flex;
+    width: 300px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
 }
 
-.social-media > a > i {
-    font-size: 35px;
+.social-media > ul > li {
+    width: 50px;
+    height: 50px;
+}
+
+.social-media > ul > li > a > i {
+    font-size: 30px;
     color: white;
-    margin-right: 8px;
 }
 
-.social-media > a > i:hover {
-    color: aqua;
+.social-media > ul > li > a > i:hover {
+    font-size: 35px;
+    color: cyan;
 }
 
 #About {
@@ -333,3 +339,5 @@ span {
     padding-top: 28px;
     color: white;
 }
+
+
