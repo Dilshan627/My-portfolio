@@ -436,4 +436,35 @@ span {
     color: white;
 }
 
+#Contact > aside {
+    position: absolute;
+    top: 100px;
+    width: 50%;
+    height: 60%;
+}
 
+.contact-right {
+    left: 50%;
+}
+
+#Contact > h4 {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 68%;
+    padding-top: 10px;
+}
+
+
+#Contact > h4:before {
+    content: "";
+    display: block;
+    width: calc(95%);
+    height: 1px;
+    background: #a19d9d;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+}
