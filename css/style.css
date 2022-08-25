@@ -166,19 +166,21 @@ span {
 
 #About > div > button {
     position: absolute;
-    margin-top: 15%;
+    top: 220px;
     left: 110px;
-    background-color: rgba(41.00000135600567, 91.00000217556953, 127.00000002980232, 1);
+    background-color: #1d6c8f;
     width: 130px;
     height: 35px;
-    border-radius: 10px;
+    border-color: #1d6c8f;
     color: white;
     font-size: 15px;
     cursor: pointer;
 }
 
 #About > div > button:hover {
-    border-color: aqua;
+    background-color: white;
+    color: black;
+    border-color: #1d6c8f;
 }
 
 #Education {
@@ -190,19 +192,27 @@ span {
     padding-right: 50px;
 }
 
-#Education > h1 {
+.education-base {
+    position: absolute;
+    background-color: red;
+    height: 560px;
+    width: calc(100% / 1.5);
+    right: 0;
+}
+
+.education-base > h1 {
     position: relative;
-    font-size: 36px;
+    font-size: 20px;
     text-align: center;
     padding: 20px;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 100px;
 }
 
-#Education > h1:before {
+.education-base > h1:before {
     content: "";
     display: block;
-    width: 120px;
+    width: 100px;
     height: 2px;
     background: #000;
     position: absolute;
@@ -210,10 +220,10 @@ span {
     top: 50%;
 }
 
-#Education > h1:after {
+.education-base > h1:after {
     content: "";
     display: block;
-    width: 120px;
+    width: 100px;
     height: 2px;
     background: #000;
     position: absolute;
@@ -221,21 +231,21 @@ span {
     top: 50%;
 }
 
-#Education > h1 > i {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+.education-base > h1 > i {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
 }
 
-#Education > div {
-    left: 25%;
+.education-base > div {
+    left: 20%;
     padding: 3px 0 27px 22px;
     margin-top: -8px;
     border-left: 2px solid #82909c;
     position: relative;
 }
 
-#Education > div:before {
+.education-base > div:before {
     content: "";
     position: absolute;
     width: 16px;
@@ -256,19 +266,27 @@ span {
     right: 0;
 }
 
-#Skills > h1 {
+.skill-base {
+    position: absolute;
+    background-color: red;
+    height: 560px;
+    width: calc(100% / 1.5);
+}
+
+
+.skill-base > h1 {
     position: relative;
-    font-size: 36px;
+    font-size: 20px;
     text-align: center;
     padding: 20px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
 }
 
-#Skills > h1:before {
+.skill-base > h1:before {
     content: "";
     display: block;
-    width: 120px;
+    width: 100px;
     height: 2px;
     background: #000;
     position: absolute;
@@ -276,10 +294,10 @@ span {
     top: 50%;
 }
 
-#Skills > h1:after {
+.skill-base > h1:after {
     content: "";
     display: block;
-    width: 120px;
+    width: 100px;
     height: 2px;
     background: #000;
     position: absolute;
@@ -287,15 +305,12 @@ span {
     top: 50%;
 }
 
-#Skills > h1 > i {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+.skill-base > h1 > i {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
 }
 
-#Skills > i {
-    font-size: 50px;
-}
 
 #Project {
     position: relative;
@@ -324,21 +339,19 @@ span {
     top: 0;
 }
 
-#Project>aside{
+#Project > aside {
     display: flex;
     text-align: center;
     justify-content: space-evenly;
     margin-top: 80px;
 }
-#Project>aside>div{
+
+#Project > aside > div {
     width: 250px;
     height: 180px;
     background-color: #EBEAE6;
     border-color: #B9A9A9;
 }
-
-
-
 
 
 #Contact {
