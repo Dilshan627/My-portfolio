@@ -194,7 +194,6 @@ span {
 
 .education-base {
     position: absolute;
-    background-color: red;
     height: 560px;
     width: calc(100% / 1.5);
     right: 0;
@@ -268,7 +267,6 @@ span {
 
 .skill-base {
     position: absolute;
-    background-color: red;
     height: 560px;
     width: calc(100% / 1.5);
 }
@@ -309,6 +307,22 @@ span {
     width: 25px;
     height: 25px;
     margin-right: 5px;
+}
+
+.skill-base > h2 {
+    font-size: 25px;
+    text-align: center;
+    color: #3c3c3c;
+}
+
+.skill-base > div {
+    position: absolute;
+    width: calc(100% / 2);
+    height: 450px;
+}
+
+.backend {
+    left: 50%;
 }
 
 
