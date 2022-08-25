@@ -326,13 +326,13 @@ span {
 }
 
 .skill-base > div > h3 {
-    margin-top: 50px;
+    margin-top: 70px;
     text-align: center;
     margin-bottom: 50px;
 }
 
 .skill-base > div > ul {
-    margin-left: 50px;
+    margin-left: 110px;
     margin-bottom: 20px;
 }
 
@@ -341,6 +341,16 @@ span {
     color: #1f1e1e;
 }
 
+.icon {
+    position: absolute;
+    bottom: 90px;
+    margin-left: 100px;
+}
+
+.icon > i {
+    font-size: 30px;
+    margin-left: 25px;
+}
 
 #Project {
     position: relative;
