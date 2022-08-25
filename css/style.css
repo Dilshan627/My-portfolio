@@ -159,7 +159,7 @@ span {
 #About > div > p {
     position: absolute;
     width: 600px;
-    left: 110px;
+    left: 15%;
     font-size: 20px;
     margin-top: 25px;
 }
@@ -167,7 +167,7 @@ span {
 #About > div > button {
     position: absolute;
     top: 220px;
-    left: 110px;
+    left: 15%;
     background-color: #1d6c8f;
     width: 130px;
     height: 35px;
@@ -186,7 +186,7 @@ span {
 #Education {
     margin-top: 50px;
     position: relative;
-    height: 650px;
+    height: 600px;
     width: 50vw;
     display: inline-block;
     padding-right: 50px;
@@ -275,7 +275,7 @@ span {
 #Skills {
     margin-top: 50px;
     position: absolute;
-    height: 650px;
+    height: 600px;
     width: 50vw;
     display: inline-block;
     right: 0;
@@ -411,6 +411,12 @@ span {
     height: 180px;
     background-color: #EBEAE6;
     border-color: #B9A9A9;
+}
+
+#Project > button {
+    position: absolute;
+    left: 75%;
+    margin-top: 50px;
 }
 
 
