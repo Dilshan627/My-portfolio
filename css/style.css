@@ -325,6 +325,22 @@ span {
     left: 50%;
 }
 
+.skill-base > div > h3 {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.skill-base > div > ul {
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.skill-base > div > ul > i {
+    margin-right: 8px;
+    color: #1f1e1e;
+}
+
 
 #Project {
     position: relative;
