@@ -136,14 +136,14 @@ span {
 #About > div {
     position: absolute;
     height: 350px;
-    width: calc(100% / 2);
+    width: calc(60%);
     border-radius: 30px;
     box-shadow: 6px 6px 6px rgb(0 0 0 / 25%);
     background: #C8CCE7;
 }
 
 #About > div > img {
-    left: 285px;
+    left: 35%;
     position: absolute;
     top: -48px;
     width: 1000px;
@@ -239,7 +239,7 @@ span {
 .education-base > div {
     left: 20%;
     padding: 3px 0 27px 22px;
-    margin-top: -8px;
+    margin-top: 0;
     border-left: 2px solid #82909c;
     position: relative;
 }
@@ -255,6 +255,22 @@ span {
     background: #fff;
     border: 2px solid #82909c;
 }
+
+.education-base > div > h1 {
+    /*color: #0563BB;*/
+}
+
+.education-base > div > h2 {
+    font-size: 16px;
+    color: rgb(122, 122, 122);
+    width: 37px;
+}
+
+.education-base > div > h3 {
+    font-style: italic;
+    font-size: 14px;
+}
+
 
 #Skills {
     margin-top: 50px;
@@ -338,7 +354,7 @@ span {
 
 .skill-base > div > ul > i {
     margin-right: 8px;
-    color: #1f1e1e;
+    color: #82909c;
 }
 
 .icon {
@@ -355,6 +371,7 @@ span {
 #Project {
     position: relative;
     height: 580px;
+
 }
 
 #Project > h1 {
@@ -369,7 +386,7 @@ span {
 #Project > h1:before {
     content: "";
     display: block;
-    width: 1600px;
+    width: calc(60%);
     height: 1px;
     background: #a19d9d;
     position: absolute;
@@ -383,7 +400,10 @@ span {
     display: flex;
     text-align: center;
     justify-content: space-evenly;
-    margin-top: 80px;
+    margin-left: 20%;
+    margin-top: 50px;
+    width: calc(60%);
+
 }
 
 #Project > aside > div {
