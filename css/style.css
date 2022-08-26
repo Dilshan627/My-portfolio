@@ -152,7 +152,7 @@ span {
     font-weight: 800;
     color: #F5F6F7;
     font-size: 235px;
-    left: 24%;
+    left: 20%;
     line-height: 1;
     font-family: 'Poppins', sans-serif;
 }
@@ -165,14 +165,12 @@ span {
 }
 
 #About > div > h1 {
-    left: 82px;
     font-size: 40px;
     font-weight: 700;
     color: #001D38;
     font-family: 'Poppins', sans-serif;
     position: absolute;
     top: 132px;
-
 }
 
 #About > div > p {
@@ -183,7 +181,6 @@ span {
     margin-top: 36px;
     margin-bottom: 36px;
     top: 172px;
-    left: 80px;
     width: 500px;
 }
 
@@ -210,7 +207,6 @@ span {
     cursor: pointer;
     top: 300px;
     position: absolute;
-    left: 80px;
 }
 
 #About > div > button:hover {
