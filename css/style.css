@@ -42,7 +42,7 @@ nav > ul > li > a {
     text-decoration: none;
     color: white;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 nav > ul > li > a:hover {
@@ -51,8 +51,8 @@ nav > ul > li > a:hover {
 }
 
 .sticky {
-    height: 70px;
-    background: rgb(0, 0, 0);
+    height: 60px;
+    background: #1a1a1a;
     transition: 0.3s;
 }
 
@@ -133,20 +133,26 @@ span {
     height: 600px;
 }
 
+#About > img {
+    position: absolute;
+    top: 0;
+    right: 20%;
+}
+
 #About > div {
     position: absolute;
     height: 350px;
-    width: calc(60%);
-    border-radius: 30px;
-    box-shadow: 6px 6px 6px rgb(0 0 0 / 25%);
-    background: #C8CCE7;
+    width: 60%;
+/*    border-radius: 30px;*/
+/*    box-shadow: 6px 6px 6px rgb(0 0 0 / 25%);*/
+/*    background: #C8CCE7;*/
 }
 
 #About > div > img {
-    left: 35%;
+    left: 55%;
     position: absolute;
-    top: -48px;
-    width: 1000px;
+    top: 32px;
+    width: 35%;
 }
 
 #About > div > h1 {
@@ -184,7 +190,7 @@ span {
 }
 
 #Education {
-    margin-top: 50px;
+    margin-top: 120px;
     position: relative;
     height: 600px;
     width: 50vw;
@@ -194,7 +200,6 @@ span {
 
 .education-base {
     position: absolute;
-    height: 560px;
     width: calc(100% / 1.5);
     right: 0;
 }
@@ -273,7 +278,7 @@ span {
 
 
 #Skills {
-    margin-top: 50px;
+    margin-top: 120px;
     position: absolute;
     height: 600px;
     width: 50vw;
@@ -283,7 +288,6 @@ span {
 
 .skill-base {
     position: absolute;
-    height: 560px;
     width: calc(100% / 1.5);
 }
 
@@ -334,7 +338,6 @@ span {
 .skill-base > div {
     position: absolute;
     width: calc(100% / 2);
-    height: 450px;
 }
 
 .backend {
@@ -386,7 +389,7 @@ span {
 #Project > h1:before {
     content: "";
     display: block;
-    width: calc(60%);
+    width: 60%;
     height: 1px;
     background: #a19d9d;
     position: absolute;
@@ -459,7 +462,7 @@ span {
 #Contact > h4:before {
     content: "";
     display: block;
-    width: calc(95%);
+    width: 95%;
     height: 1px;
     background: #a19d9d;
     position: absolute;
