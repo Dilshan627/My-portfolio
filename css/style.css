@@ -11,7 +11,7 @@
 header {
     height: 100vh;
     width: 99vw;
-    background-color: #1a1a1a;
+    background-color: #181818;
 }
 
 #logo {
@@ -53,7 +53,7 @@ nav > ul > li > a:hover {
 
 .sticky {
     height: 60px;
-    background: #1a1a1a;
+    background: #181818;
     transition: 0.3s;
 }
 
@@ -61,20 +61,20 @@ nav > ul > li > a:hover {
     position: absolute;
     top: 40%;
     left: 35%;
+    text-align: center;
     transform: translateY(-15%);
 }
 
 .main-text > h1 {
-    font-size: 120px;
-    color: #3c3c3c;
-    font-weight: 800;
-    line-height: 120px;
+    font-size: 70px;
+    color: #ffffff;
+    font-family: 'Exo 2', sans-serif;
 }
 
 .main-text > h2 {
     position: absolute;
     margin-top: 50px;
-    left: 60px;
+    left: 26%;
     font-size: 25px;
 }
 
@@ -83,28 +83,15 @@ span {
     letter-spacing: 2px;
 }
 
-.main-img {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    bottom: 0;
-    right: 63%;
-    text-align: right;
-}
-
-.main-img > img {
-    height: 100%;
-}
-
 .social-media {
     position: absolute;
-    right: 8px;
-    bottom: 0;
+    left: 40%;
+    bottom: 15%;
 }
 
 .social-media > ul {
     display: flex;
-    width: 300px;
+    width: 400px;
     height: 80px;
     align-items: center;
     justify-content: center;
@@ -112,17 +99,17 @@ span {
 }
 
 .social-media > ul > li {
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
 }
 
 .social-media > ul > li > a > i {
-    font-size: 30px;
+    font-size: 40px;
     color: white;
 }
 
 .social-media > ul > li > a > i:hover {
-    font-size: 35px;
+    font-size: 45px;
     color: #615CFD;
 }
 
@@ -184,39 +171,36 @@ span {
     width: 500px;
 }
 
-#About > div > button {
+button {
     background: #615CFD;
     color: #fff;
-    display: inline-block;
-    padding: 14px 38px;
     font-family: "Muli", sans-serif;
     font-size: 14px;
     font-weight: 500;
+    padding: 14px 38px;
     border: 0;
     border: 1px solid transparent;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
     text-align: center;
-    color: #fff !important;
-    text-transform: capitalize;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
+}
+
+button:hover {
+    background-color: white;
+    color: #615CFD;
+    border-color: #615CFD;
     cursor: pointer;
+}
+
+#About > div > button {
+    display: inline-block;
     top: 300px;
     position: absolute;
 }
 
-#About > div > button:hover {
-    background-color: white;
-    color: black;
-    border-color: #615CFD;
-}
-
 #Education {
-    margin-top: 120px;
+    padding-top: 120px;
     position: relative;
     height: 600px;
     width: 50vw;
@@ -237,6 +221,7 @@ span {
     padding: 20px;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 100px;
+    color: #001D38;
 }
 
 .education-base > h1:before {
@@ -285,7 +270,7 @@ span {
     left: -10px;
     top: 0;
     background: #fff;
-    border: 2px solid #82909c;
+    border: 2px solid #615CFD;
 }
 
 .education-base > div > h1 {
@@ -303,9 +288,8 @@ span {
     font-size: 14px;
 }
 
-
 #Skills {
-    margin-top: 120px;
+    padding-top: 120px;
     position: absolute;
     height: 600px;
     width: 50vw;
@@ -318,7 +302,6 @@ span {
     width: calc(100% / 1.5);
 }
 
-
 .skill-base > h1 {
     position: relative;
     font-size: 20px;
@@ -326,6 +309,7 @@ span {
     padding: 20px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
+    color: #001D38;
 }
 
 .skill-base > h1:before {
@@ -385,12 +369,12 @@ span {
 
 .skill-base > div > ul > i {
     margin-right: 8px;
-    color: #82909c;
+    color: #3a3737;
 }
 
 .icon {
     position: absolute;
-    bottom: 90px;
+    bottom: -50px;
     margin-left: 100px;
 }
 
@@ -402,6 +386,7 @@ span {
 #Services {
     position: relative;
     height: 600px;
+    padding-top: 120px;
 }
 
 #Services > h1 {
@@ -457,6 +442,7 @@ span {
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     padding-top: 50px;
+    color: #001D38;
 }
 
 #Project > aside {
@@ -478,15 +464,14 @@ span {
 
 #Project > button {
     position: absolute;
-    left: 75%;
-    margin-top: 50px;
+    left: 70%;
+    top: 360px;
 }
-
 
 #Contact {
     position: relative;
     height: 500px;
-    background: #24242F;
+    background: #181818;
 }
 
 #Contact > h1 {
@@ -517,7 +502,6 @@ span {
     top: 68%;
     padding-top: 10px;
 }
-
 
 #Contact > h4:before {
     content: "";
