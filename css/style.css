@@ -202,7 +202,7 @@ button:hover {
 #Education {
     padding-top: 120px;
     position: relative;
-    height: 600px;
+    height: 700px;
     width: 50vw;
     display: inline-block;
     padding-right: 50px;
@@ -297,7 +297,7 @@ button:hover {
 #Skills {
     padding-top: 120px;
     position: absolute;
-    height: 600px;
+    height: 700px;
     width: 50vw;
     display: inline-block;
     right: 0;
@@ -380,7 +380,7 @@ button:hover {
 
 .icon {
     position: absolute;
-    bottom: -50px;
+    bottom: 40px;
     margin-left: 100px;
 }
 
@@ -389,13 +389,13 @@ button:hover {
     margin-left: 25px;
 }
 
-#Services {
+#Project {
     position: relative;
-    height: 600px;
-    padding-top: 120px;
+    height: 950px;
+    padding-top: 60px;
 }
 
-#Services > h1 {
+#Project > h1 {
     position: relative;
     top: 10%;
     font-size: 36px;
@@ -406,7 +406,7 @@ button:hover {
     color: #001D38;
 }
 
-#Services > h1:before {
+#Project > h1:before {
     position: absolute;
     height: 60px;
     width: 1px;
@@ -416,7 +416,7 @@ button:hover {
     bottom: 100%;
 }
 
-.service-content {
+.project-content {
     width: 66%;
     margin-top: 8%;
     margin-left: 17%;
@@ -425,53 +425,14 @@ button:hover {
     justify-content: space-evenly;
 }
 
-.service-content > div {
+.project-content > div {
     width: 380px;
     height: 344px;
     border: 1px solid #E8E8E8;
 }
 
-.service-content > div:hover {
+.project-content > div:hover {
     border: 1px solid #615CFD;
-}
-
-#Project {
-    position: relative;
-    height: 580px;
-    margin-top: 5%;
-}
-
-#Project > h1 {
-    position: relative;
-    font-size: 36px;
-    text-align: center;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    padding-top: 50px;
-    color: #001D38;
-}
-
-#Project > aside {
-    display: flex;
-    text-align: center;
-    justify-content: space-evenly;
-    margin-left: 20%;
-    margin-top: 50px;
-    width: 60%;
-
-}
-
-#Project > aside > div {
-    width: 250px;
-    height: 180px;
-    background-color: #EBEAE6;
-    border: 1px solid #E8E8E8;
-}
-
-#Project > button {
-    position: absolute;
-    left: 70%;
-    top: 360px;
 }
 
 #Contact {
@@ -514,7 +475,7 @@ button:hover {
     display: block;
     width: 95%;
     height: 1px;
-    background: #a19d9d;
+    background: #fff;
     position: absolute;
     left: 0;
     right: 0;
