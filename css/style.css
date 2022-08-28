@@ -433,12 +433,17 @@ button:hover {
 
 .project-content > div:hover {
     border: 1px solid #615CFD;
+    content: "";
+    background: rgba(243, 240, 240, 0.7);
+    transition: all ease-in-out 0.5s;
+    z-index: 2;
+    opacity: 0;
 }
 
 #Project>button{
     position: absolute;
     left: 74.5%;
-    bottom: 25%;
+    bottom: 22%;
 }
 
 #Contact {
