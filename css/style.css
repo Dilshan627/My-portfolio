@@ -418,7 +418,7 @@ button:hover {
 
 .project-content {
     width: 66%;
-    margin-top: 8%;
+    margin-top: 10%;
     margin-left: 17%;
     display: flex;
     text-align: center;
@@ -433,6 +433,12 @@ button:hover {
 
 .project-content > div:hover {
     border: 1px solid #615CFD;
+}
+
+#Project>button{
+    position: absolute;
+    left: 74.5%;
+    bottom: 25%;
 }
 
 #Contact {
