@@ -220,7 +220,6 @@ button:hover {
     text-align: center;
     padding: 20px;
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 100px;
     color: #001D38;
 }
 
@@ -251,6 +250,13 @@ button:hover {
     height: 25px;
     margin-right: 5px;
     color: #615CFD;
+}
+
+.education-base > h2 {
+    font-size: 25px;
+    text-align: center;
+    color: #3c3c3c;
+    margin-bottom: 65px;
 }
 
 .education-base > div {
