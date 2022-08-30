@@ -35,16 +35,30 @@
 }
 
 .project-content > div {
-    width: 380px;
+    width: 379px;
     height: 344px;
     border: 1px solid #E8E8E8;
+    background-color: #181818;
+}
+
+.project-content > div > img:hover {
+    opacity: 10%;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.project-content > div > img {
+    width: 100%;
+    height: 100%;
 }
 
 .project-content > div:hover {
     border: 1px solid #615CFD;
 }
 
-#Project>button{
+
+
+#Project > button {
     position: absolute;
     left: 74.5%;
     bottom: 22%;
