@@ -1,0 +1,85 @@
+#About {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+}
+
+#About > img {
+    position: absolute;
+    top: 0;
+    right: 20%;
+}
+
+#About > div {
+    position: absolute;
+    height: 350px;
+    width: 60%;
+}
+
+#About > h1 {
+    position: absolute;
+    top: 12%;
+    font-weight: 800;
+    color: #F5F6F7;
+    font-size: 235px;
+    left: 20%;
+    line-height: 1;
+    font-family: 'Poppins', sans-serif;
+}
+
+#About > div > img {
+    left: 55%;
+    position: absolute;
+    top: 32px;
+    width: 35%;
+}
+
+#About > div > h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #001D38;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 132px;
+}
+
+#About > div > p {
+    position: absolute;
+    font-size: 16px;
+    font-weight: 400;
+    color: #727272;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    top: 172px;
+    width: 500px;
+}
+
+button {
+    background: #615CFD;
+    color: #fff;
+    font-family: "Muli", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 14px 38px;
+    border: 0;
+    border: 1px solid transparent;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: white;
+    color: #615CFD;
+    border-color: #615CFD;
+    cursor: pointer;
+}
+
+#About > div > button {
+    display: inline-block;
+    top: 300px;
+    position: absolute;
+}

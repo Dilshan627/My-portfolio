@@ -1,0 +1,113 @@
+/*::-webkit-scrollbar {*/
+/*    display: none;*/
+/*}*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 100vh;
+    width: 99vw;
+    background-color: #181818;
+}
+
+#logo {
+    font-size: 30px;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    padding-top: 10px;
+    padding-left: 12%;
+    padding-right: 12%;
+    position: fixed;
+    z-index: 5;
+}
+
+nav > ul > li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 25px;
+    z-index: 7;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav > ul > li > a:hover {
+    color: #615CFD;
+    transition: 0.3s;
+}
+
+.sticky {
+    height: 60px;
+    background: #181818;
+    transition: 0.3s;
+}
+
+.main-text {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    text-align: center;
+    transform: translateY(-15%);
+}
+
+.main-text > h1 {
+    font-size: 70px;
+    color: #ffffff;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.main-text > h2 {
+    position: absolute;
+    margin-top: 50px;
+    left: 26%;
+    font-size: 25px;
+}
+
+span {
+    color: yellow;
+    letter-spacing: 2px;
+}
+
+.social-media {
+    position: absolute;
+    left: 40%;
+    bottom: 15%;
+}
+
+.social-media > ul {
+    display: flex;
+    width: 400px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.social-media > ul > li {
+    width: 75px;
+    height: 75px;
+}
+
+.social-media > ul > li > a > i {
+    font-size: 40px;
+    color: white;
+}
+
+.social-media > ul > li > a > i:hover {
+    font-size: 45px;
+    color: #615CFD;
+}

@@ -1,0 +1,189 @@
+#Education {
+    padding-top: 120px;
+    position: relative;
+    height: 700px;
+    width: 50vw;
+    display: inline-block;
+    padding-right: 50px;
+}
+
+.education-base {
+    position: absolute;
+    width: calc(100% / 1.5);
+    right: 0;
+}
+
+.education-base > h1 {
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #001D38;
+}
+
+.education-base > h1:before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    left: 23%;
+    top: 50%;
+}
+
+.education-base > h1:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    right: 23%;
+    top: 50%;
+}
+
+.education-base > h1 > i {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    color: #615CFD;
+}
+
+.education-base > h2 {
+    font-size: 25px;
+    text-align: center;
+    color: #3c3c3c;
+    margin-bottom: 65px;
+}
+
+.education-base > div {
+    left: 14%;
+    padding: 3px 0 27px 22px;
+    margin-top: 0;
+    border-left: 2px solid #615CFD;
+    position: relative;
+}
+
+.education-base > div:before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -10px;
+    top: 0;
+    background: #fff;
+    border: 2px solid #615CFD;
+}
+
+.education-base > div > h1 {
+    /*color: #0563BB;*/
+}
+
+.education-base > div > h2 {
+    font-size: 16px;
+    color: rgb(122, 122, 122);
+    width: 37px;
+}
+
+.education-base > div > h3 {
+    font-style: italic;
+    font-size: 14px;
+}
+
+#Skills {
+    padding-top: 120px;
+    position: absolute;
+    height: 700px;
+    width: 50vw;
+    display: inline-block;
+    right: 0;
+}
+
+.skill-base {
+    position: absolute;
+    width: calc(100% / 1.5);
+}
+
+.skill-base > h1 {
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: #001D38;
+}
+
+.skill-base > h1:before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    left: 25%;
+    top: 50%;
+}
+
+.skill-base > h1:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    right: 23%;
+    top: 50%;
+}
+
+.skill-base > h1 > i {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    color: #615CFD;
+}
+
+.skill-base > h2 {
+    font-size: 25px;
+    text-align: center;
+    color: #3c3c3c;
+}
+
+.skill-base > div {
+    position: absolute;
+    width: calc(100% / 2);
+}
+
+.backend {
+    left: 50%;
+}
+
+.skill-base > div > h3 {
+    margin-top: 70px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.skill-base > div > ul {
+    margin-left: 110px;
+    margin-bottom: 20px;
+}
+
+.skill-base > div > ul > i {
+    margin-right: 8px;
+    color: #3a3737;
+}
+
+.icon {
+    position: absolute;
+    bottom: 40px;
+    margin-left: 100px;
+}
+
+.icon > i {
+    font-size: 30px;
+    margin-left: 25px;
+}
