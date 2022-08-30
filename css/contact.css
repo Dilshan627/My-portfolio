@@ -18,11 +18,12 @@
     position: absolute;
     top: 100px;
     width: 50%;
-    height: 60%;
+    height: 30%;
 }
 
 .contact-right {
     left: 50%;
+    width: 30%;
 }
 
 #Contact > h4 {
@@ -44,4 +45,12 @@
     right: 0;
     margin: auto;
     top: 0;
+}
+
+.contact-left {
+    left: 100px;
+}
+
+.contact-left > h1 {
+    color: white;
 }
