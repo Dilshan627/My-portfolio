@@ -40,13 +40,14 @@
     border: 1px solid #E8E8E8;
     background-color: #181818;
 }
-.project-content > div:hover img{
+
+.project-content > div:hover img {
     opacity: 10%;
     transition-property: all;
     transition-duration: 1s;
 }
 
-.project-content > div:hover .project-link{
+.project-content > div:hover .project-link {
     display: block;
     transition-property: all;
     transition-duration: 1s;
@@ -62,11 +63,12 @@
     border: 1px solid #615CFD;
 }
 
-.project-link{
+.project-link {
     position: relative;
     display: none;
 }
-.project-link>i{
+
+.project-link > i {
     color: #fff;
     font-size: 15px;
 }
