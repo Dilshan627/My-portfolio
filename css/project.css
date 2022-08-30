@@ -40,11 +40,17 @@
     border: 1px solid #E8E8E8;
     background-color: #181818;
 }
-
-.project-content > div > img:hover {
+.project-content > div:hover img{
     opacity: 10%;
     transition-property: all;
     transition-duration: 1s;
+}
+
+.project-content > div:hover .project-link{
+    display: block;
+    transition-property: all;
+    transition-duration: 1s;
+    top: -170px;
 }
 
 .project-content > div > img {
@@ -60,8 +66,9 @@
     position: relative;
     display: none;
 }
-.project-link:hover{
-
+.project-link>i{
+    color: #fff;
+    font-size: 15px;
 }
 
 #Project > button {
