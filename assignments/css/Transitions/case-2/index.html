@@ -6,8 +6,64 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>case-2</title>
+
+    <style>
+        body {
+            height: 100vh;
+            background-color: blue;
+        }
+
+        .one-circle {
+            width: 250px;
+            height: 250px;
+            background-color: #727272;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            border-radius: 100%;
+
+        }
+
+        .one-circle > h2 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            width: max-content;
+            height: max-content;
+            color: white;
+        }
+
+        .one-circle:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            border-radius: 100%;
+            border: 12px solid white;
+            border-top: 12px solid crimson;
+        }
+
+        .one-circle:hover::before {
+            transform: rotate(360deg);
+            transition: all 2s;
+        }
+
+
+    </style>
 </head>
 <body>
+
+<div class="one-circle">
+    <h2>RWAD</h2>
+</div>
 
 </body>
 </html>
