@@ -7,11 +7,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>case-1</title>
     <style>
+        div{
+            width: 180px;
+            height: 80px;
+            border-radius: 10px;
+            background-color: black;
+            animation-name: my-animation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
 
+        @keyframes my-animation {
+            0%{
+                background: yellow;
+                margin: 0px 0px 0px 0px;
+            }
+            25%{
+                background: blue;
+                margin: 0px 0px 0px 500px;
+
+            }
+            50%{
+                background: orangered;
+                margin: 400px 0px 0px 500px;
+
+            }
+            75%{
+                background: red;
+                margin: 400px 0px 0px 0px;
+
+            }
+            100%{
+                background: deeppink;
+            }
+        }
     </style>
 </head>
 <body>
 
+<div>
+
+</div>
 
 </body>
 </html>
