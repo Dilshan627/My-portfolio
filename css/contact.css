@@ -1,56 +1,80 @@
 #Contact {
     position: relative;
-    height: 500px;
+    height: 300px;
     background: #181818;
 }
 
-#Contact > h1 {
+.container {
+    display: flex;
+    height: 40%;
+    /*background-color: red;*/
+}
+
+.container > div {
+    height: 100%;
+    width: 25%;
+}
+
+.contact-detail {
     position: relative;
-    font-size: 36px;
-    text-align: center;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    padding-top: 28px;
-    color: white;
 }
 
-#Contact > aside {
+.contact-detail > i {
+    font-size: 24px;
+    color: whitesmoke;
     position: absolute;
-    top: 100px;
-    width: 50%;
-    height: 30%;
+    bottom: 22px;
+    left: 30px;
 }
 
-.contact-right {
-    left: 50%;
-    width: 30%;
+.contact-detail > i > h4 {
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 18px;
+    letter-spacing: 1px;
+    font-family: inherit;
 }
 
-#Contact > h4 {
-    position: relative;
-    color: white;
-    text-align: center;
-    top: 68%;
-    padding-top: 10px;
-}
-
-#Contact > h4:before {
-    content: "";
-    display: block;
-    width: 95%;
-    height: 1px;
-    background: #fff;
+.contact-detail > h3 {
+    color: whitesmoke;
+    bottom: 0;
     position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 0;
+    left: 65px;
+    font-size: 15px;
 }
 
-.contact-left {
-    left: 100px;
+.social-profile {
+    margin-top: 50px;
+    color: whitesmoke;
+    left: 47%;
+    position: absolute;
+
 }
 
-.contact-left > h1 {
-    color: white;
+.contact-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.contact-media > li {
+    margin: 20px;
+    list-style: none;
+}
+
+.contact-media > li > a > i {
+    font-size: 25px;
+    color: whitesmoke;
+}
+
+.contact-media > li > a > i:hover {
+    color: #615CFD;
+}
+
+.rights {
+    color: whitesmoke;
+    position: absolute;
+    left: 42%;
+    margin-top: 10px;
+    font-size: 12px;
 }
