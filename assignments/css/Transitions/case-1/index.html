@@ -18,15 +18,23 @@
             transition-duration: 1s;
         }
 
-        div>i{
+        i {
             font-size: 25px;
             color: white;
             margin-top: 10px;
             margin-left: 20px;
+            transition-property: all;
+            transition-duration: 1s;
         }
 
         div:hover {
             width: 200px;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+
+        div:hover i {
+            margin-left: 150px;
             transition-property: all;
             transition-duration: 1s;
         }
@@ -37,10 +45,10 @@
 <body>
 <main>
 
-    <div> <i class="fa-solid fa-address-book"></i></div>
-    <div> <i class="fa-solid fa-truck-medical"></i></div>
-    <div> <i class="fa-solid fa-book-atlas"></i></div>
-    <div> <i class="fa-solid fa-cart-arrow-down"></i></div>
+    <div><i class="fa-solid fa-address-book"></i></div>
+    <div><i class="fa-solid fa-truck-medical"></i></div>
+    <div><i class="fa-solid fa-book-atlas"></i></div>
+    <div><i class="fa-solid fa-cart-arrow-down"></i></div>
 
 </main>
 
