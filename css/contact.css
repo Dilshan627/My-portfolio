@@ -28,11 +28,11 @@
 }
 
 .contact-detail > i > h4 {
-    font-size: 12px;
+    font-size: 15px;
     display: inline-block;
     margin-left: 18px;
     letter-spacing: 1px;
-
+    font-family: Poppins;
 }
 
 .contact-detail > h3 {
@@ -40,7 +40,8 @@
     bottom: 0;
     position: absolute;
     left: 65px;
-    font-size: 15px;
+    font-size: 12px;
+    font-family: Poppins;
 }
 
 .social-profile {
@@ -48,7 +49,21 @@
     color: whitesmoke;
     left: 47%;
     position: absolute;
+    font-family: Poppins;
+}
 
+.name-icon {
+    position: relative;
+
+}
+
+.name-icon > h3 {
+    font-family: Creepster, cursive;
+    color: #edc606;
+    margin-left: 43px;
+    bottom: 8px;
+    position: absolute;
+    font-size: 40px;
 }
 
 .contact-media {
