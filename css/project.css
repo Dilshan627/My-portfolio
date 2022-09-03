@@ -57,6 +57,19 @@
 }
 
 .box {
-    border: 2px solid black;
-    background-color: darkorange;
+    background-color: #181818;
+}
+
+.image-box {
+    width: 100%;
+    height: 60%;
+    position: relative;
+    border-radius: 0 0 10px 10px;
+}
+
+.image-box > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 10px 10px;
 }
