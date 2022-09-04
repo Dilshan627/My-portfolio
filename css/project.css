@@ -69,9 +69,9 @@
 }
 
 .box > div > h3 {
-    padding-left: 40%;
+    padding-left: 5%;
     color: white;
-
+    margin-top: 2%;
 }
 
 .box > div > p {
@@ -83,13 +83,13 @@
 
 .box > div > ul {
     display: flex;
-    margin-top: 12%;
+    margin-top: 10%;
     margin-left: 45%;
 }
 
 .box > div > ul > li {
     list-style: none;
     margin-right: 3%;
-    color: white;
+    color: #615CFD;
 }
 
