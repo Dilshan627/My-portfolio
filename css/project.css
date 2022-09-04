@@ -14,28 +14,9 @@
     color: #001D38;
 }
 
-#Project > ul {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding-top: 5%;
-    padding-bottom: 50px;
-}
-
-#Project > ul > li {
-    list-style: none;
-    margin-left: 10px;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-#Project > ul > li:hover {
-    color: #615CFD;
-}
-
 .project-content {
     position: absolute;
+    margin-top: 80px;
     width: 60%;
     left: 20%;
     height: 60%;
@@ -93,3 +74,8 @@
     color: #615CFD;
 }
 
+#Project>button{
+    position: absolute;
+    bottom: 10%;
+    left: 48%;
+}
