@@ -6,8 +6,83 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>case-3</title>
+    <style>
+        main {
+            width: 100vw;
+            height: 100vh;
+            box-shadow: 1px 3px 5px 1px #736060;
+            position: absolute;
+            overflow: hidden;
+        }
+
+        main > section {
+            height: 100%;
+            width: 400%;
+            display: flex;
+            animation-name: slider-animation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+
+        main > section > div {
+            height: 100%;
+            width: 100%;
+        }
+
+        main > section > div:nth-child(1) {
+            background: url("assets/pexels-baskin-creative-studios-1766838.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > section > div:nth-child(2) {
+            background: url("assets/pexels-james-wheeler-1519088.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > section > div:nth-child(3) {
+            background: url("assets/pexels-pixabay-35888.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > section > div:nth-child(4) {
+            background: url("assets/pexels-s-migaj-747964.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        @keyframes slider-animation {
+            0%, 20% {
+                transform: translateX(0);
+            }
+            30%, 50% {
+                transform: translateX(-25%);
+            }
+            60%, 80% {
+                transform: translateX(-50%);
+            }
+            90%, 100% {
+                transform: translateX(-75%);
+            }
+        }
+
+    </style>
 </head>
 <body>
+
+<main>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</main>
+
 
 </body>
 </html>
