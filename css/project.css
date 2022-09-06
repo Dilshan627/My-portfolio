@@ -43,10 +43,10 @@
 }
 
 .project-content > div:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition-property: all;
     transition-duration: .5s;
-    box-shadow: 3px 3px 8px 1px #1c1717e8;
+    box-shadow: 4px 4px 8px 2px #1c1717e8;
 }
 
 .img {
