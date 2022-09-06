@@ -46,7 +46,9 @@
 }
 
 .img {
-    background-color: red;
+    background: url("../assets/CarParking.png ");
+    background-size: cover;
+    background-position: center;
     height: 50%;
     border-radius: 0 0 12px 12px;
 }
@@ -70,7 +72,7 @@
     font-size: 25px;
 }
 
-#Project > button {
+#Project > a > button {
     position: absolute;
     left: 47%;
     bottom: 14%;
