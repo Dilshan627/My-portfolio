@@ -104,9 +104,13 @@ span {
 .social-media > ul > li > a > i {
     font-size: 40px;
     color: white;
+    transition-property: all;
+    transition-duration: .3s;
 }
 
 .social-media > ul > li > a > i:hover {
-    font-size: 45px;
+    transform: scale(1.2);
     color: #615CFD;
+    transition-property: all;
+    transition-duration: .3s;
 }
