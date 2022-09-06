@@ -114,3 +114,48 @@ span {
     transition-property: all;
     transition-duration: .3s;
 }
+
+@media all and (max-width: 320px) {
+
+    header {
+        height: 500px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .main-text {
+        top: 18%;
+        left: 26%;
+    }
+
+    .main-text > h1 {
+        font-size: 20px;
+    }
+
+    .main-text > h2 {
+        font-size: 12px;
+        margin-top: 25px;
+        left: 4%;
+    }
+
+    .social-media {
+        left: 0%;
+        top: 250px;
+    }
+
+    .social-media > ul {
+        width: 328px;
+        height: 50px;
+    }
+
+    .social-media > ul > li {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-media > ul > li > a > i {
+        font-size: 18px;
+    }
+}
