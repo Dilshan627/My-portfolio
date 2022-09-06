@@ -37,12 +37,16 @@
 .project-content > div {
     width: 379px;
     height: 344px;
-    border: 1px solid #E8E8E8;
     background-color: #181818;
+    transition-property: all;
+    transition-duration: .5s;
 }
 
 .project-content > div:hover {
-    border: 1px solid #615CFD;
+    transform: scale(1.05);
+    transition-property: all;
+    transition-duration: .5s;
+    box-shadow: 3px 3px 8px 1px #1c1717e8;
 }
 
 .img {
