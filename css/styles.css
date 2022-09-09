@@ -201,6 +201,40 @@ button:hover {
     position: absolute;
 }
 
+.education-skill-container {
+    position: relative;
+    height: 600px;
+}
+
+.education-skill-content {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 60%;
+
+    display: flex;
+    background: #edc606;
+}
+
+#Education {
+    height: 100%;
+    background: red;
+    width: 50%;
+    position: relative;
+    margin-top: 80px;
+}
+
+#Skills {
+    height: 100%;
+    background: green;
+    width: 50%;
+    position: relative;
+    margin-top: 80px;
+}
+
 
 @media all and (max-width: 980px) {
 
