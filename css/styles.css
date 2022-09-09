@@ -365,6 +365,18 @@ button:hover {
     color: #3a3737;
 }
 
+.icon {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon > i {
+    font-size: 30px;
+    margin-right: 10px;
+
+}
 
 @media all and (max-width: 1200px) {
 }
