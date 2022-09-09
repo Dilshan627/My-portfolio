@@ -117,9 +117,61 @@ nav > ul > li > a:hover {
     transition-duration: .3s;
 }
 
+button {
+    background: #615CFD;
+    color: #fff;
+    font-family: "Muli", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 14px 38px;
+    border: 0;
+    border: 1px solid transparent;
+    border-radius: 0px;
+    text-align: center;
+}
 
+button:hover {
+    background-color: white;
+    color: #615CFD;
+    border-color: #615CFD;
+    cursor: pointer;
+}
 
+#About {
+    position: relative;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    height: 600px;
+}
 
+.about-container {
+    width: 60%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+.img-container {
+
+}
+
+.img-container > img:nth-child(1) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25%;
+}
+
+.img-container > img:nth-child(2) {
+    position: absolute;
+    width: 30%;
+    right: 13%;
+    top: 25%;
+}
 
 
 @media all and (max-width: 980px) {
