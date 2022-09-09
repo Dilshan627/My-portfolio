@@ -159,6 +159,7 @@ span {
         font-size: 18px;
     }
 }
+
 @media all and (max-width: 425px) {
     header {
         height: 500px;
@@ -203,9 +204,33 @@ span {
     }
 
 }
-@media all and (min-width: 425px)and (max-width: 768px) {
 
+@media all and (max-width: 768px) {
+    header {
+        height: 500px;
+    }
+
+    nav {
+        display: none;
+    }
 }
-@media all and (max-width: 1024px) {
 
+@media all and (max-width: 1024px) {
+    header {
+        height: 500px;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+@media all and (max-width: 1440px) {
+    header {
+        height: 500px;
+    }
+
+    nav {
+        display: none;
+    }
 }
