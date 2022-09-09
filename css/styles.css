@@ -155,8 +155,23 @@ button:hover {
     margin: auto;
 }
 
-.img-container {
+.about-container > h1 {
+    position: absolute;
+    top: 12%;
+    font-weight: 800;
+    color: rgb(245, 246, 247);
+    font-size: 14rem;
+    line-height: 1;
+    font-family: Poppins, sans-serif;
+}
 
+.about-content > h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #001D38;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 38%;
 }
 
 .img-container > img:nth-child(1) {
@@ -171,6 +186,22 @@ button:hover {
     width: 30%;
     right: 13%;
     top: 25%;
+    z-index: 1;
+}
+
+.about-container > div > p {
+    width: 59%;
+    position: absolute;
+    top: 58%;
+    font-weight: 400;
+    color: #727272;
+}
+
+
+.about-content > button {
+    display: inline-block;
+    top: 70%;
+    position: absolute;
 }
 
 
