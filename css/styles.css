@@ -246,10 +246,49 @@ button:hover {
     color: #615CFD;
 }
 
+.education-content > h2 {
+    margin-top: 8px;
+    font-size: 25px;
+    text-align: center;
+    color: #3c3c3c;
+}
+
 .education-chart {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
 }
+
+.education-chart > div {
+    padding: 3px 0 27px 22px;
+    margin-top: 0;
+    border-left: 2px solid #615CFD;
+    position: relative;
+}
+
+.education-chart > div:before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -11px;
+    top: 0;
+    background: #fff;
+    border: 2px solid #615CFD;
+}
+
+.education-chart > div > h2 {
+    font-size: 16px;
+    color: rgb(122, 122, 122);
+    width: 37px;
+}
+
+.education-chart > div > h3 {
+    font-style: italic;
+    font-size: 14px;
+}
+
 
 #Skills {
     height: 100%;
