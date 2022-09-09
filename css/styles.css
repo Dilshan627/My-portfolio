@@ -313,7 +313,7 @@ button:hover {
 .skill-content > h1 > i {
     width: 25px;
     height: 25px;
-    margin-right: 5px;
+    margin-right: 8px;
     color: #615CFD;
 }
 
@@ -378,6 +378,7 @@ button:hover {
 
 }
 
+
 @media all and (max-width: 1200px) {
 }
 
@@ -424,5 +425,7 @@ button:hover {
 
     .education-skill-content {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
