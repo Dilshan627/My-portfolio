@@ -289,12 +289,80 @@ button:hover {
     font-size: 14px;
 }
 
-
 #Skills {
     height: 100%;
-    background: green;
     width: 50%;
     position: relative;
+}
+
+.skill-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-content > h1 {
+    position: relative;
+    margin-top: 80px;
+    font-size: 26px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #001D38;
+}
+
+.skill-content > h1 > i {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    color: #615CFD;
+}
+
+.skill-content > h2 {
+    margin-top: 8px;
+    font-size: 25px;
+    text-align: center;
+    color: #3c3c3c;
+}
+
+.skill-content > div {
+    display: flex;
+    margin-top: 50px;
+}
+
+.frontend > h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.frontend > ul {
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.frontend > ul > i {
+    margin-top: 8px;
+    color: #3a3737;
+}
+
+
+.backend {
+    margin-left: 12px;
+}
+
+
+.backend > h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.backend > ul {
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.backend > ul > i {
+    margin-top: 8px;
+    color: #3a3737;
 }
 
 
@@ -335,5 +403,14 @@ button:hover {
 
     .social-media > ul > li > a > i {
         font-size: 2.3rem;
+    }
+
+    .education-skill-container {
+        height: 1200px;
+
+    }
+
+    .education-skill-content {
+        flex-direction: column;
     }
 }
