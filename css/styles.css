@@ -17,6 +17,10 @@ header {
     color: #fff;
 }
 
+#manu {
+    display: none;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -113,6 +117,44 @@ nav > ul > li > a:hover {
     transition-duration: .3s;
 }
 
+
+
+
+
+
 @media all and (max-width: 980px) {
 
+    /*nav {*/
+    /*    display: flex;*/
+    /*}*/
+    #manu {
+        display: inline-block;
+        color: white;
+        font-size: 30px;
+    }
+
+    /**/
+    /*#manu:active {*/
+    /*    color: red;*/
+    /*}*/
+    /*#manu:active .sticky{*/
+    /*    background: red !important;*/
+    /*}*/
+    nav > ul {
+        display: none;
+        /*flex-direction: column;*/
+    }
+
+    .main-text > h1 {
+        font-size: 2.8em;
+    }
+
+    .main-text > h2 {
+        margin-top: 5%;
+        font-size: 1.2em;
+    }
+
+    .social-media > ul > li > a > i {
+        font-size: 2.3rem;
+    }
 }
