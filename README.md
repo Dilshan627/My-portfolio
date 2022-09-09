@@ -1,10 +1,7 @@
 # My-Portfoliyo
 
-Site-Map   :  https://www.gloomaps.com/JcedflycPd
+💫 Site-Map   :  https://www.gloomaps.com/JcedflycPd
 
-Wire-Frame :  https://wireframe.cc/pro/pp/71d0e2b78570058
+💫 Wire-Frame :  https://wireframe.cc/pro/pp/a2bedc63f578055
 
-Mock-Up    :  https://www.figma.com/file/5SzukDaTX6TjEKgpQXiyrK/My-Profile?node-id=0%3A1
-
-WebHost URL : http://dilshan.42web.io/?i=1
-
+💫 Mock-Up    :  https://www.figma.com/file/5SzukDaTX6TjEKgpQXiyrK/My-Profile?node-id=0%3A1
