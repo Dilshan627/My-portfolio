@@ -216,15 +216,39 @@ button:hover {
     width: 60%;
 
     display: flex;
-    background: #edc606;
 }
 
 #Education {
     height: 100%;
-    background: red;
     width: 50%;
     position: relative;
+}
+
+.education-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.education-content > h1 {
+    position: relative;
     margin-top: 80px;
+    font-size: 26px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #001D38;
+}
+
+.education-content > h1 > i {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    color: #615CFD;
+}
+
+.education-chart {
+    display: flex;
+    flex-direction: column;
 }
 
 #Skills {
@@ -232,9 +256,11 @@ button:hover {
     background: green;
     width: 50%;
     position: relative;
-    margin-top: 80px;
 }
 
+
+@media all and (max-width: 1200px) {
+}
 
 @media all and (max-width: 980px) {
 
