@@ -441,6 +441,28 @@ button:hover {
     margin-left: 3%;
     height: 30vh;
     width: 30vw;
+    transition-property: all;
+    transition-duration: .5s;
+}
+
+.project-content > div:hover {
+    transform: scale(1.02);
+    transition-property: all;
+    transition-duration: .5s;
+    box-shadow: 4px 4px 8px 2px #1c1717e8;
+}
+
+.project-container > a {
+    margin-top: 5%;
+    align-self: center;
+}
+
+.img {
+    height: 50%;
+    border-radius: 0 0 12px 12px;
+    background: url("../assets/CarParking.png");
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -503,7 +525,7 @@ button:hover {
     }
 
     .project-content {
-        margin-top: 15%;
+        margin-top: 10%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
