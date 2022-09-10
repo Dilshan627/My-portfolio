@@ -152,9 +152,13 @@ button:hover {
     margin: auto;
 }
 
-.about-container > h1 {
-    position: absolute;
-    top: 12%;
+.img-container {
+    display: flex;
+}
+
+.img-container > h1 {
+    flex-basis: 69%;
+    align-self: self-end;
     font-weight: 800;
     color: rgb(245, 246, 247);
     font-size: 14rem;
@@ -162,44 +166,108 @@ button:hover {
     font-family: Poppins, sans-serif;
 }
 
-.about-content > h1 {
+.img-container > img {
+    align-self: self-end;
+    width: 26%;
+}
+
+.about-content {
+    position: relative;
+    top: -20%;
+    height: 75%;
+
+    display: flex;
+}
+
+.about-content > div:nth-child(1) {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.about-content > div:nth-child(1) > h1 {
+    position: relative;
     font-size: 40px;
     font-weight: 700;
-    color: #001D38;
-    font-family: 'Poppins', sans-serif;
-    position: absolute;
-    top: 38%;
+    color: rgb(0, 29, 56);
+    font-family: Poppins, sans-serif;
+    top: -14%;
 }
 
-.img-container > img:nth-child(1) {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 25%;
-}
-
-.img-container > img:nth-child(2) {
-    position: absolute;
-    width: 30%;
-    right: 13%;
-    top: 25%;
-    z-index: 1;
-}
-
-.about-container > div > p {
-    width: 59%;
-    position: absolute;
-    top: 58%;
+.about-content > div:nth-child(1) > p {
     font-weight: 400;
     color: #727272;
 }
 
-
-.about-content > button {
-    display: inline-block;
-    top: 70%;
-    position: absolute;
+.about-content > div:nth-child(1) > button {
+    align-self: self-start;
+    position: relative;
+    top: 3%;
 }
+
+.about-content > div:nth-child(2) {
+    align-self: self-end;
+    width: 50%;
+    height: 100%;
+}
+
+.about-content > div:nth-child(2) > img {
+    width: 55%;
+}
+
+
+/*.about-container > h1 {*/
+/*    position: absolute;*/
+/*    top: 12%;*/
+/*    font-weight: 800;*/
+/*    color: rgb(245, 246, 247);*/
+/*    font-size: 14rem;*/
+/*    line-height: 1;*/
+/*    font-family: Poppins, sans-serif;*/
+/*}*/
+
+/*.about-content > h1 {*/
+/*    font-size: 40px;*/
+/*    font-weight: 700;*/
+/*    color: #001D38;*/
+/*    font-family: 'Poppins', sans-serif;*/
+/*    position: absolute;*/
+/*    top: 38%;*/
+/*}*/
+
+/*.img-container > img:nth-child(1) {*/
+/*    position: absolute;*/
+/*    right: 0;*/
+/*    top: 0;*/
+/*    width: 25%;*/
+/*}*/
+
+/*.img-container > img:nth-child(2) {*/
+/*    position: absolute;*/
+/*    width: 30%;*/
+/*    right: 13%;*/
+/*    top: 25%;*/
+/*    z-index: 1;*/
+/*}*/
+
+/*.about-container > div > p {*/
+/*    width: 59%;*/
+/*    position: absolute;*/
+/*    top: 58%;*/
+/*    font-weight: 400;*/
+/*    color: #727272;*/
+/*}*/
+
+
+/*.about-content > button {*/
+/*    display: inline-block;*/
+/*    top: 70%;*/
+/*    position: absolute;*/
+/*}*/
 
 .education-skill-container {
     position: relative;
