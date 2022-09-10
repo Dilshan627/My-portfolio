@@ -482,11 +482,39 @@ button:hover {
     color: #e3dcdc;
 }
 
+.project-details > div > a > i {
+    font-size: 25px;
+    color: #727272;
+}
 
-@media all and (max-width: 1200px) {
+.project-details > div > a > i:hover {
+    color: #615CFD;
+}
+
+#Contact {
+    position: relative;
+    height: 300px;
+    background: #181818;
+}
+
+@media all and (max-width: 1350px) {
+
+    .img-container > img {
+        display: none;
+    }
+
+    .img-container > h1 {
+        font-size: 9rem;
+    }
+
+    #Project {
+        height: 750px;
+    }
+
     .project-container {
         width: 70%;
     }
+
     .project-content > div {
         margin-top: 3%;
         width: 45vw;
@@ -558,6 +586,7 @@ button:hover {
 
 
 }
+
 @media all and (max-width: 650px) {
     #Project {
         height: 1240px;
