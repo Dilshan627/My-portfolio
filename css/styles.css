@@ -396,7 +396,7 @@ button:hover {
 
 #Project {
     position: relative;
-    height: 800px;
+    height: 750px;
     padding-top: 12px;
 
     display: flex;
@@ -437,7 +437,7 @@ button:hover {
 }
 
 .project-content > div {
-    background: #edc606;
+    background: #2a2a2a;
     margin-left: 3%;
     height: 30vh;
     width: 30vw;
@@ -465,8 +465,33 @@ button:hover {
     background-position: center;
 }
 
+.project-details {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #727272;
+}
+
+.project-details > div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-details > h3 {
+    color: #e3dcdc;
+}
+
 
 @media all and (max-width: 1200px) {
+    .project-container {
+        width: 70%;
+    }
+    .project-content > div {
+        margin-top: 3%;
+        width: 45vw;
+        height: 45vh;
+    }
 }
 
 @media all and (max-width: 980px) {
@@ -517,7 +542,7 @@ button:hover {
     }
 
     #Project {
-        height: 1100px;
+        height: 1400px;
     }
 
     .project-container {
@@ -531,7 +556,17 @@ button:hover {
         align-items: center;
     }
 
+
+}
+@media all and (max-width: 650px) {
+    #Project {
+        height: 1240px;
+    }
+
+
     .project-content > div {
         margin-top: 3%;
+        width: 65vw;
+        height: 40vh;
     }
 }
