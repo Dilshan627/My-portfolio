@@ -219,56 +219,6 @@ button:hover {
     width: 55%;
 }
 
-
-/*.about-container > h1 {*/
-/*    position: absolute;*/
-/*    top: 12%;*/
-/*    font-weight: 800;*/
-/*    color: rgb(245, 246, 247);*/
-/*    font-size: 14rem;*/
-/*    line-height: 1;*/
-/*    font-family: Poppins, sans-serif;*/
-/*}*/
-
-/*.about-content > h1 {*/
-/*    font-size: 40px;*/
-/*    font-weight: 700;*/
-/*    color: #001D38;*/
-/*    font-family: 'Poppins', sans-serif;*/
-/*    position: absolute;*/
-/*    top: 38%;*/
-/*}*/
-
-/*.img-container > img:nth-child(1) {*/
-/*    position: absolute;*/
-/*    right: 0;*/
-/*    top: 0;*/
-/*    width: 25%;*/
-/*}*/
-
-/*.img-container > img:nth-child(2) {*/
-/*    position: absolute;*/
-/*    width: 30%;*/
-/*    right: 13%;*/
-/*    top: 25%;*/
-/*    z-index: 1;*/
-/*}*/
-
-/*.about-container > div > p {*/
-/*    width: 59%;*/
-/*    position: absolute;*/
-/*    top: 58%;*/
-/*    font-weight: 400;*/
-/*    color: #727272;*/
-/*}*/
-
-
-/*.about-content > button {*/
-/*    display: inline-block;*/
-/*    top: 70%;*/
-/*    position: absolute;*/
-/*}*/
-
 .education-skill-container {
     position: relative;
     height: 600px;
@@ -412,11 +362,9 @@ button:hover {
     color: #3a3737;
 }
 
-
 .backend {
     margin-left: 12px;
 }
-
 
 .backend > h3 {
     text-align: center;
@@ -444,6 +392,55 @@ button:hover {
     font-size: 30px;
     margin-right: 10px;
 
+}
+
+#Project {
+    position: relative;
+    height: 800px;
+    padding-top: 12px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Project > h1 {
+    position: relative;
+    margin-top: 5%;
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 5px;
+    color: #001D38;
+}
+
+#Project > h1:before {
+    position: absolute;
+    height: 60px;
+    width: 1px;
+    background: #181818;
+    content: '';
+    left: 50%;
+    bottom: 100%;
+}
+
+.project-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.project-content {
+    display: flex;
+}
+
+.project-content > div {
+    background: #edc606;
+    margin-left: 3%;
+    height: 30vh;
+    width: 30vw;
 }
 
 
@@ -495,5 +492,24 @@ button:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    #Project {
+        height: 1100px;
+    }
+
+    .project-container {
+        margin-top: 0;
+    }
+
+    .project-content {
+        margin-top: 15%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-content > div {
+        margin-top: 3%;
     }
 }
