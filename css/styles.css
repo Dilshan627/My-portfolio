@@ -299,7 +299,7 @@ button:hover {
 .education-chart > div > h2 {
     font-size: 16px;
     color: rgb(122, 122, 122);
-    width: 37px;
+    width: 96px;
 }
 
 .education-chart > div > h3 {
@@ -460,10 +460,26 @@ button:hover {
 .img {
     height: 50%;
     border-radius: 0 0 12px 12px;
+}
+
+.box-one > .img {
     background: url("../assets/CarParking.png");
     background-size: cover;
     background-position: center;
 }
+
+.box-two > .img {
+    background: url("../assets/purple___pink_3d_illustration_group_project_presentation_template__4__1.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.box-three > .img {
+    background: url("../assets/purple___pink_3d_illustration_group_project_presentation_template__1__1.png");
+    background-size: cover;
+    background-position: center;
+}
+
 
 .project-details {
     margin: 3px;
