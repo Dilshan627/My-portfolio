@@ -466,6 +466,7 @@ button:hover {
 }
 
 .project-details {
+    margin: 3px;
     height: 50%;
     display: flex;
     flex-direction: column;
@@ -512,9 +513,28 @@ button:hover {
     align-items: center;
 }
 
+.info-box-icon {
+    height: 100%;
+    width: 25%;
+}
+
 .info-box {
     height: 100%;
     width: 25%;
+
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.info-box > i {
+    margin-right: 5px;
+    font-size: 30px;
+}
+
+.info-box > div {
+    display: flex;
+    flex-direction: column;
 }
 
 .other-box {
@@ -534,6 +554,32 @@ button:hover {
 .other-box {
     color: white;
     text-align: center;
+}
+
+.contact-media-icon {
+    margin-bottom: 10px;
+}
+
+.contact-media-icon > ul {
+    display: flex;
+}
+
+.contact-media-icon > ul > li {
+    list-style: none;
+}
+
+.contact-media-icon > ul > li {
+    list-style: none;
+    margin: 4px;
+}
+
+.contact-media-icon > ul > li > a > i {
+    font-size: 30px;
+    color: white;
+}
+
+.contact-media-icon > ul > li > a > i:hover {
+    color: #615CFD;
 }
 
 @media all and (max-width: 1350px) {
