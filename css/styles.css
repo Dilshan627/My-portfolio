@@ -893,4 +893,8 @@ button:hover {
     .name-icon {
         margin-left: 20%;
     }
+
+    .rights {
+        font-size: 11px;
+    }
 }
