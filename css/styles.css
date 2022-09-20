@@ -452,10 +452,7 @@ button:hover {
     box-shadow: 4px 4px 8px 2px #1c1717e8;
 }
 
-.project-container > a {
-    margin-top: 5%;
-    align-self: center;
-}
+
 
 .img {
     height: 50%;
