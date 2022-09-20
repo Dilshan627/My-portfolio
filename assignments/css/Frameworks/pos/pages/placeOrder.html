@@ -60,7 +60,7 @@
                             <div class="row">
                                 <div class="col">
                                     <label class="form-label" for="orderId">Order Id:</label>
-                                    <input class="form-control" id="orderId" type="text">
+                                    <input class="form-control" id="orderId" placeholder="O-001" type="text">
                                 </div>
                                 <div class="col">
                                     <label class="form-label" for="orderDate">Date:</label>
@@ -93,15 +93,46 @@
                 </div>
                 <div class="col-lg-4 mt-2">
                     <div class="card">
-                        <div class="card-header bg-secondary font-weight-bolder">Details</div>
+                        <div class="card-header bg-secondary font-weight-bolder">Item</div>
                         <div class="card-body">
+                            <div class="col-md-5">
+                                <label class="form-label" for="txtItemCode">Item Code:</label>
+                                <input class="form-control" id="txtItemCode" type="text">
+                            </div>
+                            <div class="mt-3">
+                                <label class="form-label" for="txtItemName">Item Name:</label>
+                                <input class="form-control" id="txtItemName" type="text">
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="form-label" for="price">price:</label>
+                                    <input class="form-control" id="price" type="text">
+                                </div>
+                                <div class="col">
+                                    <label class="form-label" for="qty">Qty:</label>
+                                    <input class="form-control" id="qty" type="text">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="form-label" for="orderQty">Order Qty:</label>
+                                    <input class="form-control" id="orderQty" type="text">
+                                </div>
+                                <div class="col position-relative">
+                                    <button type="button"
+                                            class="btn btn-primary position-absolute top-50 start-50 translate-middle mt-2"
+                                            id="btnAdd">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 mt-2">
                     <div class="card">
-                        <div class="card-header bg-secondary font-weight-bolder">Details</div>
                         <div class="card-body">
 
                         </div>
