@@ -57,6 +57,36 @@
                             </button>
                         </div>
                         <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="form-label" for="orderId">Order Id:</label>
+                                    <input class="form-control" id="orderId" type="text">
+                                </div>
+                                <div class="col">
+                                    <label class="form-label" for="orderDate">Date:</label>
+                                    <input class="form-control" id="orderDate" type="Date">
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <label for="inputCustomer" class="form-label">Customer:</label>
+                                <select id="inputCustomer" class="form-select">
+                                    <option selected>Id</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+
+                            <div class="mt-3">
+                                <label class="form-label" for="txtName">Name:</label>
+                                <input class="form-control" id="txtName" type="text">
+                            </div>
+                            <div class="mt-3">
+                                <label class="form-label" for="txtContact">Contact:</label>
+                                <input class="form-control" id="txtContact" type="text">
+                            </div>
+                            <div class="mt-3">
+                                <label class="form-label" for="txtAddress">Address:</label>
+                                <input class="form-control" id="txtAddress" type="text">
+                            </div>
 
                         </div>
                     </div>
@@ -80,7 +110,35 @@
             </div>
         </div>
 
+        <section class="row mt-4 ">
+            <div class="col">
+                <table class="table table-hover">
+                    <thead class="bg-secondary">
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Customer Name</th>
+                        <th>Customer Address</th>
+                        <th>Phone number</th>
+                    </tr>
+                    </thead>
+                    <tbody id="customerTable"></tbody>
 
+                    <tr>
+                        <th scope="row">C001</th>
+                        <td>dilshan</td>
+                        <td>gampaha</td>
+                        <td>0772759120</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">C002</th>
+                        <td>dilshan</td>
+                        <td>gampaha</td>
+                        <td>0772759120</td>
+                    </tr>
+
+                </table>
+            </div>
+        </section>
     </div>
 </section>
 
