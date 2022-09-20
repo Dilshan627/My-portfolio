@@ -453,7 +453,6 @@ button:hover {
 }
 
 
-
 .img {
     height: 50%;
     border-radius: 0 0 12px 12px;
@@ -557,10 +556,34 @@ button:hover {
     position: relative;
     height: 150px;
     width: 100%;
-    background-image: url("../assets/1661511736574.jpg");
+    padding: 3px;
+}
+
+.card-image > div {
+    height: 100%;
+    width: 100%;
     background-size: cover;
     background-position: center;
-    padding: 3px;
+}
+
+.card-image > .ass1 {
+    background-image: url("../assets/assignment/1.PNG");
+}
+
+.card-image > .ass2 {
+    background-image: url("../assets/assignment/2.PNG");
+}
+
+.card-image > .ass3 {
+    background-image: url("../assets/assignment/3.PNG");
+}
+
+.card-image > .ass4 {
+    background-image: url("../assets/assignment/4.PNG");
+}
+
+.card-image > .ass5 {
+    background-image: url("../assets/assignment/5.PNG");
 }
 
 .card-image .card-img {
