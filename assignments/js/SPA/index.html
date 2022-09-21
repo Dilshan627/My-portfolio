@@ -9,14 +9,152 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <style>
+
+        #homeContent {
+            width: 100%;
+            height: 250px;
+        }
+
+        #homeContent > section {
+            height: 100%;
+        }
+
+        #homeContent > section > div {
+            height: 100%;
+        }
+
+    </style>
+
 </head>
 <body>
 
+<section class="row-12">
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">POS system</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Place order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Item</a>
+                    </li>
 
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</section>
+
+<!--Home-->
+<section class="container-fluid mt-5" id="homeContent">
+    <section class="row container-fluid justify-content-around ">
+        <div class=" col-md-2 border border-3 border border-secondary mx-1 position-relative">
+            <i class="fa-solid fa-user position-absolute top-0 start-50 translate-middle-x fs-1 mt-5"></i>
+            <h3 class="position-absolute top-50 start-50 translate-middle">05</h3>
+            <h4 class="position-absolute bottom-0 start-50 translate-middle-x my-5">Customer</h4>
+        </div>
+        <div class=" col-md-2 border border-3 border border-secondary mx-1 position-relative">
+            <i class="fa-solid fa-boxes-stacked position-absolute top-0 start-50 translate-middle-x fs-1 mt-5"></i>
+            <h3 class="position-absolute top-50 start-50 translate-middle">05</h3>
+            <h4 class="position-absolute bottom-0 start-50 translate-middle-x my-5">Item</h4>
+        </div>
+        <div class=" col-md-2 border border-3 border border-secondary mx-1 position-relative">
+            <i class="fa-solid fa-cart-shopping position-absolute top-0 start-50 translate-middle-x fs-1 mt-5"></i>
+            <h3 class="position-absolute top-50 start-50 translate-middle">05</h3>
+            <h4 class="position-absolute bottom-0 start-50 translate-middle-x my-5">Order</h4>
+        </div>
+    </section>
+</section>
+
+<!--customer-->
+<section class="container-fluid mt-3" id="customerContent">
+
+    <section class="row mt-3 justify-content-around">
+        <div class="col-12 col-md-4">
+            <div class="shadow-sm pt-3 pb-5 px-3 py-3 mt-2">
+                <h1 class="h1 mb-3">Customer Manage</h1>
+                <div class="mb-3">
+                    <label class="form-label" for="txtSearchCusID">Search Customer</label>
+                    <input class="form-control" id="txtSearchCusID" placeholder="Customer-id" type="text">
+                </div>
+                <button class="btn btn-primary" id="btnSearchCustomer">Search</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-5">
+            <div class="mb-3">
+                <label class="form-label" for="txtCusID">Customer ID</label>
+                <input class="form-control" id="txtCusID" placeholder="Customer ID" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtCusName">Customer Name</label>
+                <input class="form-control" id="txtCusName" placeholder="Customer Name" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtCusAddress">Customer Address</label>
+                <input class="form-control" id="txtCusAddress" placeholder="Customer Address" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="txtCusPn">phone number</label>
+                <input class="form-control" id="txtCusPn" placeholder="phone number" type="text">
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2" id="btnSaveCustomer">Save</button>
+                <button class="btn btn-success me-md-2" id="btnUpdateCustomer">Update</button>
+                <button class="btn btn-danger me-md-2" id="btnDeleteCustomer">Delete</button>
+            </div>
+        </div>
+    </section>
+    <section class="row mt-4">
+        <div class="col1" style="height:275px; overflow-x: scroll">
+            <table class="table table-hover">
+                <thead class="bg-secondary">
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Customer Name</th>
+                    <th>Customer Address</th>
+                    <th>Phone number</th>
+                </tr>
+                </thead>
+                <tbody id="customerTable"></tbody>
+                <tr>
+                    <th scope="row">C001</th>
+                    <td>dilshan</td>
+                    <td>gampaha</td>
+                    <td>0772759120</td>
+                </tr>
+                <tr>
+                    <th scope="row">C002</th>
+                    <td>dilshan</td>
+                    <td>gampaha</td>
+                    <td>0772759120</td>
+                </tr>
+
+            </table>
+        </div>
+    </section>
+</section>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
+<script src="assets/js/jquery-3.6.1.min.js"></script>
 </body>
 </html>
