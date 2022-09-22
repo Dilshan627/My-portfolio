@@ -13,7 +13,7 @@
 #### 💫 Mock-Up    :  <a href="https://www.figma.com/file/5SzukDaTX6TjEKgpQXiyrK/My-Profile?node-id=0%3A1">view</a>
 
 
-#POS system 
+# POS system 
 
 #### 💫 Site-Map   :  <a href="https://www.gloomaps.com/h7aHozPkwW">view</a>
 
