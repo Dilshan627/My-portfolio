@@ -8,7 +8,14 @@ $('.clear').click(function () {
 //     $('#display').val(eval($('#display').val()));
 // });
 
-$('.finalResult').click(function () {
 
+
+$('.sum').click(function () {
+
+});
+
+$('.finalResult').click(function () {
     console.log($('#display').val());
 });
+
+
