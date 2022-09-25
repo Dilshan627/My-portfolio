@@ -14,7 +14,7 @@
 
         aside {
             width: 320px;
-            height: 500px;
+            height: 480px;
         }
 
         .display-container {
@@ -23,7 +23,9 @@
 
         .button-container {
             height: 80%;
+            margin-top: 24px ;
         }
+
     </style>
 </head>
 <body>
@@ -32,77 +34,37 @@
 <section class="bg-secondary position-relative">
     <aside class="position-absolute top-50 start-50 translate-middle bg-light">
         <div class="display-container position-relative">
-            <label class="position-absolute top-50 start-50 translate-middle border border-danger" id="lbl-display"
-                   style="height: 80px;width: 290px;"></label>
+            <input id="display" class="position-absolute top-50 start-50 translate-middle border border-danger"
+                   type="text" placeholder="0" style="height: 80px;width: 290px; text-align: right;margin-top: 15px;">
         </div>
-        <div class="button-container position-relative d-flex flex-column container-fluid">
-            <div style="height: 20%" class="d-flex mt-2">
-                <div style="height: 100%;width: 25%; margin: 2px">
-                    <button type="button" class="btn btn-outline-primary" style="width: 100%;height: 100%;">7</button>
-                </div>
-                <div style="height: 100%;width: 25%; margin: 2px">
-                    <button type="button" class="btn btn-outline-primary" style="width: 100%;height: 100%;">8</button>
-                </div>
-                <div style="height: 100%;width: 25%; margin: 2px">
-                    <button type="button" class="btn btn-outline-primary" style="width: 100%;height: 100%;">9</button>
-                </div>
-                <div style="height: 100%;width: 25%; margin: 2px">
-                    <button type="button" class="btn btn-outline-primary" style="width: 100%;height: 100%;">+</button>
-                </div>
-            </div>
-            <div style="height: 20%" class="d-flex mt-2">
-                <div style="height: 100%;width: 25%; margin: 2px">
-                    <button type="button" class="btn btn-outline-primary" style="width: 100%;height: 100%;">4</button>
-                </div>
-                <div style="height: 100%;width: 25%; margin: 2px">
-                    <button type="button" class="btn btn-outline-primary" style="width: 100%;height: 100%;">5</button>
-                </div>
-                <div style="height: 100%;width: 25%; margin: 2px">
-                    <button type="button" class="btn btn-outline-primary" style="width: 100%;height: 100%;">6</button>
-                </div>
-                <div style="height: 100%;width: 25%; margin: 2px">
-                    <button type="button" class="btn btn-outline-primary" style="width: 100%;height: 100%;">-</button>
-                </div>
-            </div>
-            <div style="height: 20%" class="d-flex mt-2">
-                <div style="height: 100%;width: 25%; margin: 2px">
-                    <button type="button" class="btn btn-outline-primary" style="width: 100%;height: 100%;">1</button>
-                </div>
-                <div style="height: 100%;width: 25%; margin: 2px">
-                    <button type="button" class="btn btn-outline-primary" style="width: 100%;height: 100%;">2</button>
-                </div>
-                <div style="height: 100%;width: 25%; margin: 2px">
-                    <button type="button" class="btn btn-outline-primary" style="width: 100%;height: 100%;">3</button>
-                </div>
-                <div style="height: 100%;width: 25%; margin: 2px">
-                    <button type="button" class="btn btn-outline-primary" style="width: 100%;height: 100%;">/</button>
-                </div>
-            </div>
-            <div style="height: 20%" class="d-flex mt-2">
-                <div style="height: 100%;width: 25%; margin: 2px">
-                    <button type="button" class="btn btn-outline-primary" id="btn-0" style="width: 100%;height: 100%;">0</button>
-                </div>
-                <div style="height: 100%;width: 25%; margin: 2px">
-                    <button type="button" class="btn btn-outline-primary" style="width: 100%;height: 100%;">.</button>
-                </div>
-                <div style="height: 100%;width: 25%; margin: 2px">
-                    <button type="button" class="btn btn-outline-primary" style="width: 100%;height: 100%;">=</button>
-                </div>
-                <div style="height: 100%;width: 25%; margin: 2px">
-                    <button type="button" class="btn btn-outline-primary" style="width: 100%;height: 100%;">*</button>
-                </div>
-            </div>
+        <div class="button-container container-fluid">
+            <input class="clc btn btn-outline-primary m-1" style="width: 62px; height: 62px" type="button" value="7">
+            <input class="clc btn btn-outline-primary m-1" style="width: 62px; height: 62px" type="button" value="8">
+            <input class="clc btn btn-outline-primary m-1" style="width: 62px; height: 62px" type="button" value="9">
+            <input class="clc btn btn-outline-primary m-1" style="width: 62px; height: 62px" type="button"
+                   value="+"><br>
+            <input class="clc btn btn-outline-primary m-1" style="width: 62px; height: 62px" type="button" value="4">
+            <input class="clc btn btn-outline-primary m-1" style="width: 62px; height: 62px" type="button" value="5">
+            <input class="clc btn btn-outline-primary m-1" style="width: 62px; height: 62px" type="button" value="6">
+            <input class="clc btn btn-outline-primary m-1" style="width: 62px; height: 62px" type="button"
+                   value="-"><br>
+            <input class="clc btn btn-outline-primary m-1" style="width: 62px; height: 62px" type="button" value="1">
+            <input class="clc btn btn-outline-primary m-1" style="width: 62px; height: 62px" type="button" value="2">
+            <input class="clc btn btn-outline-primary m-1" style="width: 62px; height: 62px" type="button" value="3">
+            <input class="clc btn btn-outline-primary m-1" style="width: 62px; height: 62px" type="button"
+                   value="/"><br>
+            <input class="clc btn btn-outline-primary m-1" style="width: 62px; height: 62px" type="button" value="0">
+            <input class="clc btn btn-outline-primary m-1" style="width: 62px; height: 62px" type="button" value=".">
+            <input class="clc btn btn-outline-primary m-1" style="width: 62px; height: 62px" type="button" value="*">
+            <input class="finalResult btn btn-outline-primary m-1" style="width: 62px; height: 62px" type="button"
+                   value="="><br>
 
-            <div style="height: 20%" class="d-flex mt-2">
-                <div style="height: 80%;width: 100%; margin: 2px">
-                    <button type="button" class="btn btn-outline-primary" id="btnClear" style="width: 100%;height: 100%;">clear
-                    </button>
-                </div>
-            </div>
+            <input class="clear btn btn-outline-primary m-1" style="width: 96%; height: 50px" type="button"
+                   value="clear">
+
         </div>
     </aside>
 </section>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
