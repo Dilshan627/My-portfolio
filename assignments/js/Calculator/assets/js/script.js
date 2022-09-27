@@ -45,11 +45,25 @@ $('.finalResult').click(function () {
 
 function finalResult() {
 
-    switch (operator){
+    switch (operator) {
 
         case "+":
+            var total = parseFloat(num1) + parseFloat(num2);
+            $('#display').val(total);
+            break;
 
-
+        case "-":
+            var total = parseFloat(num1) - parseFloat(num2);
+            $('#display').val(total);
+            break;
+        case "/":
+            var total = parseFloat(num1) / parseFloat(num2);
+            $('#display').val(total);
+            break;
+        case "*":
+            var total = parseFloat(num1) + parseFloat(num2);
+            $('#display').val(total);
+            break;
     }
 
 }
