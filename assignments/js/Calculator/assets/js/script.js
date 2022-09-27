@@ -61,7 +61,7 @@ function finalResult() {
             $('#display').val(total);
             break;
         case "*":
-            var total = parseFloat(num1) + parseFloat(num2);
+            var total = parseFloat(num1) * parseFloat(num2);
             $('#display').val(total);
             break;
     }
