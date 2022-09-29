@@ -12,8 +12,8 @@ var typed = new Typed(".input", {
     loop: true
 });
 
+/*navbar button clock color*/
 document.getElementById("btn1").style.borderBottom = "2px solid #615CFD";
-
 document.getElementById("btn1").addEventListener("click", function () {
     document.getElementById("btn1").style.borderBottom = "2px solid #615CFD";
     document.getElementById("btn2").style.borderBottom = "none";
