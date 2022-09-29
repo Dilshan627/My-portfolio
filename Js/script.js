@@ -3,7 +3,7 @@
 window.addEventListener("scroll",function(){
     var nav = document.querySelector("nav");
     nav.classList.toggle("sticky",window.scrollY > 0);
-})
+});
 
 /*auto type word*/
 var typed = new Typed(".input",{
@@ -11,7 +11,28 @@ var typed = new Typed(".input",{
     typeSpeed:120,
     backSpeed:90,
     loop: true
-})
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*swiper*/
 var swiper = new Swiper(".slide-content", {
