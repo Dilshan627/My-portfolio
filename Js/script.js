@@ -17,7 +17,7 @@ document.getElementById("btn1").style.borderBottom = "2px solid #615CFD";
 document.getElementById("btn1").addEventListener("click", function () {
     document.getElementById("btn1").style.borderBottom = "2px solid #615CFD";
     document.getElementById("btn2").style.borderBottom = "none";
-    document.getElementById("btn3").style.borderBottom = "noe";
+    document.getElementById("btn3").style.borderBottom = "none";
     document.getElementById("btn4").style.borderBottom = "none";
     document.getElementById("btn5").style.borderBottom = "none";
     document.getElementById("btn6").style.borderBottom = "none";
@@ -47,7 +47,7 @@ document.getElementById("btn4").addEventListener("click", function () {
     document.getElementById("btn6").style.borderBottom = "none";
 });
 document.getElementById("btn5").addEventListener("click", function () {
-    document.getElementById("btn1").style.borderBottom = "noe";
+    document.getElementById("btn1").style.borderBottom = "none";
     document.getElementById("btn2").style.borderBottom = "none";
     document.getElementById("btn3").style.borderBottom = "none";
     document.getElementById("btn4").style.borderBottom = "none";
