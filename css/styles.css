@@ -48,15 +48,14 @@ nav > ul > li > a {
     font-family: 'Poppins', sans-serif;
 }
 
-/*nav > ul > li.active {*/
-/*    border-bottom: 2px solid #615CFD;*/
-/*    transition: 0.3s ease background-color;*/
-/*}*/
+/*nav > ul > li.active {
+    border-bottom: 2px solid #615CFD;
+    transition: 0.3s ease background-color;
+}
 
-/*nav > ul > li.active > a {*/
-/*    color: #615CFD;*/
-/*}*/
-
+nav > ul > li.active > a {
+    color: #615CFD;
+}*/
 
 nav > ul > li > a:hover {
     color: #615CFD;
