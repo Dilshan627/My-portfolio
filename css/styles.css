@@ -405,7 +405,7 @@ button:hover {
 
 #Project {
     position: relative;
-    height: 750px;
+    height: 670px;
     padding-top: 12px;
 
     display: flex;
@@ -514,154 +514,73 @@ button:hover {
 }
 
 .assignment {
+    height: 300px;
+}
+
+#container {
+    height: 25vh;
+    margin: 0;
+    padding: 0;
+    display: grid ;
+    place-items: center;
+}
+
+#slider-container {
     height: 250px;
-}
-
-
-.slide-container {
-    max-width: 1120px;
-    width: 100%;
-    padding: 40px 0;
-}
-
-.slide-content {
-    margin: 0 40px;
-    overflow: hidden;
-    border-radius: 25px;
-}
-
-.card {
-    border-radius: 25px;
-    background-color: #FFF;
-}
-
-.overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #4070F4;
-    border-radius: 25px 25px 0 25px;
-}
-
-.overlay::before,
-.overlay::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -40px;
-    height: 40px;
-    width: 40px;
-    background-color: #4070F4;
-}
-
-.overlay::after {
-    border-radius: 0 25px 0 0;
-    background-color: #FFF;
-}
-
-.card-image {
+    width: 85vw;
+    max-width: 1400px;
     position: relative;
-    height: 150px;
-    width: 100%;
-    padding: 3px;
+    overflow: hidden;
+    padding: 20px;
 }
 
-.card-image > div {
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-}
-
-.card-image > .ass1 {
-    background-image: url("../assets/assignment/1.PNG");
-}
-
-.card-image > .ass2 {
-    background-image: url("../assets/assignment/2.PNG");
-}
-
-.card-image > .ass3 {
-    background-image: url("../assets/assignment/3.PNG");
-}
-
-.card-image > .ass4 {
-    background-image: url("../assets/assignment/4.PNG");
-}
-
-.card-image > .ass5 {
-    background-image: url("../assets/assignment/5.PNG");
-}
-
-.card-image .card-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #4070F4;
-}
-
-.button {
-    border: none;
-    font-size: 16px;
-    color: #FFF;
-    padding: 8px 16px;
-    background-color: #4070F4;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+#slider-container .btn {
     position: absolute;
-    top: 40%;
-    left: 38%;
+    top: calc(50% - 30px);
+    height: 30px;
+    width: 30px;
+    border-left: 8px solid #615CFD;
+    border-top: 8px solid #615CFD;
+
 }
 
-.button:hover {
-    background: #265DF2;
+#slider-container .btn:hover {
+    transform: scale(1.2);
 }
 
-.swiper-navBtn {
-    color: #6E93f7;
-    transition: color 0.3s ease;
+#slider-container .btn.inactive {
+    border-color: rgb(153, 121, 126)
 }
 
-.swiper-navBtn:hover {
-    color: #4070F4;
+#slider-container .btn:first-of-type {
+    transform: rotate(-45deg);
+    left: 10px
 }
 
-.swiper-navBtn::before,
-.swiper-navBtn::after {
-    font-size: 35px;
+#slider-container .btn:last-of-type {
+    transform: rotate(135deg);
+    right: 10px;
 }
 
-.swiper-button-next {
-    right: 0;
+#slider-container #slider {
+    display: flex;
+    width: 1000%;
+    height: 100%;
+    transition: all .5s;
 }
 
-.swiper-button-prev {
-    left: 0;
+#slider-container #slider .slide {
+    height: 85%;
+    margin: auto 10px;
+    background-color: #a847a4;
+    display: grid;
+    place-items: center;
 }
 
-.swiper-pagination-bullet {
-    background-color: #6E93f7;
-    opacity: 1;
+#slider-container #slider .slide span {
+    color: white;
+    font-size: 150px;
 }
-
-.swiper-pagination-bullet-active {
-    background-color: #4070F4;
-}
-
-@media screen and (max-width: 768px) {
-    .slide-content {
-        margin: 0 10px;
-    }
-
-    .swiper-navBtn {
-        display: none;
-    }
-}
-
 
 #Contact {
     position: relative;
@@ -753,6 +672,40 @@ button:hover {
     color: #615CFD;
 }
 
+
+@media only screen and (min-width: 1100px) {
+
+    #slider-container #slider .slide {
+        width: calc(2.5% - 20px);
+    }
+
+}
+
+@media only screen and (max-width: 1100px) {
+
+    #slider-container #slider .slide {
+        width: calc(3.3333333% - 20px);
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    #slider-container #slider .slide {
+        width: calc(5% - 20px);
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+
+    #slider-container #slider .slide {
+        width: calc(10% - 20px);
+    }
+
+}
+
+
 @media all and (max-width: 1350px) {
 
     .about-content > div:nth-child(2) > img {
@@ -772,7 +725,7 @@ button:hover {
     }
 
     #Project {
-        height: 750px;
+        height: 660px;
     }
 
     .project-container {
@@ -857,7 +810,7 @@ button:hover {
 
     #Project {
         margin-top: 22px;
-        height: 1548px;
+        height: 1335px;
     }
 
     .project-container {
