@@ -521,7 +521,7 @@ button:hover {
     height: 25vh;
     margin: 0;
     padding: 0;
-    display: grid ;
+    display: grid;
     place-items: center;
 }
 
@@ -572,9 +572,50 @@ button:hover {
 #slider-container #slider .slide {
     height: 85%;
     margin: auto 10px;
-    background-color: #a847a4;
     display: grid;
     place-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+#slider-container #slider .slide:nth-child(1) {
+    background-image: url("../assets/assignment/1.PNG");
+}
+
+#slider-container #slider .slide:nth-child(2) {
+    background-image: url("../assets/assignment/1.PNG");
+}
+
+#slider-container #slider .slide:nth-child(3) {
+    background-image: url("../assets/assignment/1.PNG");
+}
+
+#slider-container #slider .slide:nth-child(4) {
+    background-image: url("../assets/assignment/1.PNG");
+}
+
+#slider-container #slider .slide:nth-child(5) {
+    background-image: url("../assets/assignment/1.PNG");
+}
+
+#slider-container #slider .slide:nth-child(6) {
+    background-image: url("../assets/assignment/1.PNG");
+}
+
+#slider-container #slider .slide:nth-child(7) {
+    background-image: url("../assets/assignment/1.PNG");
+}
+
+#slider-container #slider .slide:nth-child(8) {
+    background-image: url("../assets/assignment/1.PNG");
+}
+
+#slider-container #slider .slide:nth-child(9) {
+    background-image: url("../assets/assignment/1.PNG");
+}
+
+#slider-container #slider .slide:nth-child(10) {
+    background-image: url("../assets/assignment/1.PNG");
 }
 
 #slider-container #slider .slide span {
@@ -704,7 +745,6 @@ button:hover {
     }
 
 }
-
 
 @media all and (max-width: 1350px) {
 
