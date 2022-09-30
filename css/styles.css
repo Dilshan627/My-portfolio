@@ -212,6 +212,10 @@ button:hover {
     color: #727272;
 }
 
+.about-content > div:nth-child(1) >a{
+    margin-top: 12px;
+}
+
 .about-content > div:nth-child(1) > button {
     align-self: self-start;
     position: relative;
