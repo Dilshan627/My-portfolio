@@ -48,15 +48,6 @@ nav > ul > li > a {
     font-family: 'Poppins', sans-serif;
 }
 
-/*nav > ul > li.active {
-    border-bottom: 2px solid #615CFD;
-    transition: 0.3s ease background-color;
-}
-
-nav > ul > li.active > a {
-    color: #615CFD;
-}*/
-
 nav > ul > li > a:hover {
     color: #615CFD;
     transition: 0.3s;
@@ -195,7 +186,6 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 .about-content > div:nth-child(1) > h1 {
@@ -245,7 +235,6 @@ button:hover {
     top: 0;
     margin: auto;
     width: 60%;
-
     display: flex;
 }
 
@@ -404,7 +393,6 @@ button:hover {
 .icon > i {
     font-size: 30px;
     margin-right: 10px;
-
 }
 
 #Project {
@@ -607,19 +595,19 @@ button:hover {
 }
 
 #slider-container #slider .slide:nth-child(7) {
-    background-image: url("../assets/assignment/1.PNG");
+    background-image: url("../assets/assignment/7.PNG");
 }
 
 #slider-container #slider .slide:nth-child(8) {
-    background-image: url("../assets/assignment/1.PNG");
+    background-image: url("../assets/assignment/8.PNG");
 }
 
 #slider-container #slider .slide:nth-child(9) {
-    background-image: url("../assets/assignment/1.PNG");
+    background-image: url("../assets/assignment/9.PNG");
 }
 
 #slider-container #slider .slide:nth-child(10) {
-    background-image: url("../assets/assignment/1.PNG");
+    background-image: url("../assets/assignment/10.PNG");
 }
 
 #slider-container #slider .slide span {
