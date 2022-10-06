@@ -1,3 +1,9 @@
+// loading ring
+window.addEventListener("load", function () {
+    document.querySelector('.load').style.display = 'none';
+});
+
+
 /*scroll navbar */
 window.addEventListener("scroll", function () {
     var nav = document.querySelector("nav");
