@@ -27,6 +27,8 @@
 
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+
 </head>
 <body>
 
@@ -73,19 +75,21 @@
         <aside class="about-container">
             <div class="img-container">
                 <h1>About</h1>
-                <img src="assets/color_grid.png">
+                <img src="assets/color_grid.png" data-aos="fade-left">
             </div>
             <div class="about-content">
-                <div>
+                <div data-aos="fade-up-right">
                     <h1>About me</h1>
                     <p>I'm Damitha Dilshan a Full Stack Developer From Negombo,Sri lanka.
                         I am a software engineering student in institute of java software engineering and currently
                         completing
                         first
                         semester.</p>
-                    <a href=""><button>Download CV</button></a>
+                    <a href="">
+                        <button>Download CV</button>
+                    </a>
                 </div>
-                <div>
+                <div data-aos="fade-left">
                     <img src="assets/1661511736574.jpg" class="myPhoto">
                 </div>
             </div>
@@ -95,7 +99,7 @@
     <section class="education-skill-container">
         <aside class="education-skill-content">
             <!--  Education section  -->
-            <div id="Education">
+            <div id="Education" data-aos="fade-up-right">
                 <aside class="education-content">
                     <h1><i class="fa-solid fa-building-columns"></i>Education</h1>
                     <h2>knowledge</h2>
@@ -120,7 +124,7 @@
             </div>
 
             <!--  skill section  -->
-            <div id="Skills">
+            <div id="Skills" data-aos="fade-left">
                 <aside class="skill-content">
                     <h1><i class="fa-solid fa-trophy"></i>Skills</h1>
                     <h2>Experience</h2>
@@ -157,7 +161,7 @@
     </section>
 
     <!--  project section -->
-    <section id="Project">
+    <section id="Project" data-aos="zoom-in">
         <h1>Project</h1>
         <aside class="project-container">
             <div class="project-content">
@@ -204,22 +208,32 @@
         </aside>
     </section>
 
-    <section class="assignment">
+    <section class="assignment" data-aos="zoom-in">
 
         <div id="container">
             <div id="slider-container">
                 <span onclick="slideRight()" class="btn"></span>
                 <div id="slider">
-                    <div class="slide"><span><a href="assignments/css/Basics/case_1/index.html" target="_blank"><button>preview</button></a></span></div>
-                    <div class="slide"><span><a href="assignments/css/Basics/case_2/index.html" target="_blank"><button>preview</button></a></span></div>
-                    <div class="slide"><span><a href="assignments/css/Basics/case_3/index.html" target="_blank"><button>preview</button></a></span></div>
-                    <div class="slide"><span><a href="assignments/css/Basics/case_4/index.html" target="_blank"><button>preview</button></a></span></div>
-                    <div class="slide"><span><a href="assignments/css/Basics/case_5/index.html" target="_blank"><button>preview</button></a></span></div>
-                    <div class="slide"><span><a href="assignments/css/Basics/case_6/index.html" target="_blank"><button>preview</button></a></span></div>
-                    <div class="slide"><span><a href="assignments/css/Transitions/case-1/index.html" target="_blank"><button>preview</button></a></span></div>
-                    <div class="slide"><span><a href="assignments/css/Transitions/case-2/index.html" target="_blank"><button>preview</button></a></span></div>
-                    <div class="slide"><span><a href="assignments/js/Calculator/index.html" target="_blank"><button>preview</button></a></span></div>
-                    <div class="slide"><span><a href="assignments/js/SPA/index.html" target="_blank"><button>preview</button></a></span></div>
+                    <div class="slide"><span><a href="assignments/css/Basics/case_1/index.html" target="_blank"><button>preview</button></a></span>
+                    </div>
+                    <div class="slide"><span><a href="assignments/css/Basics/case_2/index.html" target="_blank"><button>preview</button></a></span>
+                    </div>
+                    <div class="slide"><span><a href="assignments/css/Basics/case_3/index.html" target="_blank"><button>preview</button></a></span>
+                    </div>
+                    <div class="slide"><span><a href="assignments/css/Basics/case_4/index.html" target="_blank"><button>preview</button></a></span>
+                    </div>
+                    <div class="slide"><span><a href="assignments/css/Basics/case_5/index.html" target="_blank"><button>preview</button></a></span>
+                    </div>
+                    <div class="slide"><span><a href="assignments/css/Basics/case_6/index.html" target="_blank"><button>preview</button></a></span>
+                    </div>
+                    <div class="slide"><span><a href="assignments/css/Transitions/case-1/index.html" target="_blank"><button>preview</button></a></span>
+                    </div>
+                    <div class="slide"><span><a href="assignments/css/Transitions/case-2/index.html" target="_blank"><button>preview</button></a></span>
+                    </div>
+                    <div class="slide"><span><a href="assignments/js/Calculator/index.html" target="_blank"><button>preview</button></a></span>
+                    </div>
+                    <div class="slide"><span><a href="assignments/js/SPA/index.html" target="_blank"><button>preview</button></a></span>
+                    </div>
                 </div>
                 <span onclick="slideLeft()" class="btn"></span>
             </div>
@@ -228,7 +242,7 @@
     </section>
 
 </main>
-<footer id="Contact">
+<footer id="Contact" data-aos="fade-up">
     <aside class="contact-info">
         <div class="info-box-icon">
             <h3 class="name-icon">Damitha dilshan</h3>
@@ -285,5 +299,11 @@
         "max-glare": 1
     });
 </script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
 </body>
 </html>
