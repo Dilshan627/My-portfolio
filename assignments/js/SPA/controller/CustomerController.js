@@ -23,8 +23,6 @@ function loadCustomer() {
 
     for (var customer of customers) {
 
-        // var row = "<tr><td>"+customer.id+"</td><td>"+customer.name+"</td><td>"+ customer.address+"</td><td>"+customer.number+"</td></tr>"
-
         var row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.number}</td></tr>`;
 
         $("#tblCustomer").append(row);
