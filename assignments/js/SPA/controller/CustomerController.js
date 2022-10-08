@@ -97,11 +97,8 @@ $('#btnClearCustomer').click(function () {
 
 function loadCustomer() {
     $("#tblCustomer").empty();
-
     for (var customer of customers) {
-
         var row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.number}</td></tr>`;
-
         $("#tblCustomer").append(row);
     }
 }
@@ -177,6 +174,7 @@ function deleteCustomer(customerID) {
         let indexNumber = customers.indexOf(customer);
         customers.splice(indexNumber, 1);
         loadCustomer();
+        clickEvent();
         return true;
     } else {
         return false;
@@ -189,8 +187,9 @@ function updateCustomer(customerID) {
         customer.id = $("#txtCusID").val();
         customer.name = $("#txtCusName").val();
         customer.address = $("#txtCusAddress").val();
-        customer.salary = $("#txtCusPn").val();
+        customer.number = $("#txtCusPn").val();
         loadCustomer();
+        clickEvent();
         return true;
     } else {
         return false;
@@ -202,7 +201,7 @@ $("#btnUpdateCustomer").click(function () {
     let customerID = $("#txtCusID").val();
     let response = updateCustomer(customerID);
     if (response) {
-        // alert("Customer Updated Successfully");
+        alert("Customer Updated Successfully");
         customerTextFieldValue("", "", "", "");
     } else {
         alert("Update Failed..!");
