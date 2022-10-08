@@ -28,6 +28,8 @@ $(".nav-item2").click(function () {
     $(".nav-item2").css("borderBottom", "2px solid gray")
     $(".nav-item3").css("borderBottom", "none")
     $(".nav-item4").css("borderBottom", "none")
+
+    clearAllTexts();
 });
 
 $(".nav-item3").click(function () {

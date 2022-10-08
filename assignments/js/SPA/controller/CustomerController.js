@@ -25,6 +25,13 @@ $('#txtCusAddress').on('keydown', function (event) {
     }
 });
 
+$('#txtCusPn').on('keydown', function (event) {
+    if (event.key == "Enter") {
+        $('#btnSaveCustomer').focus();
+    }
+});
+
+
 function clickEvent() {
     $('#tblCustomer>tr').click(function () {
         let id = $(this).children(":eq(0)").text();
@@ -38,9 +45,6 @@ function clickEvent() {
         $('#txtCusPn').val(number);
     });
 }
-
-
-
 
 $("#btnSaveCustomer").click(function () {
 
@@ -58,6 +62,7 @@ $("#btnSaveCustomer").click(function () {
     customers.push(customer);
     loadCustomer();
     clickEvent();
+    clearAllTexts();
 });
 
 function loadCustomer() {
@@ -71,3 +76,7 @@ function loadCustomer() {
     }
 }
 
+function clearAllTexts() {
+    $("#txtCusID").focus();
+    $("#txtCusID,#txtCusName,#txtCusAddress,#txtCusPn").val("");
+}
