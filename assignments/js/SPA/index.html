@@ -201,6 +201,8 @@
                 <button class="btn btn-primary me-md-2" id="btnSaveItem">Save</button>
                 <button class="btn btn-success me-md-2" id="btnUpdateItem">Update</button>
                 <button class="btn btn-danger me-md-2" id="btnDeleteItem">Delete</button>
+                <button class="btn bg-warning me-md-2" id="btnClearItem">Clear</button>
+
             </div>
 
         </div>
@@ -264,7 +266,7 @@
                             <div class="col-md-5">
                                 <label for="inputCustomer" class="form-label">Customer:</label>
                                 <select id="inputCustomer" class="form-select">
-                                    <option selected>Id</option>
+                                    <option selected>customer Id</option>
                                     <option>...</option>
                                 </select>
                             </div>
@@ -291,7 +293,10 @@
                         <div class="card-body">
                             <div class="col-md-5">
                                 <label class="form-label" for="txtItemCode">Item Code:</label>
-                                <input class="form-control" id="txtOrderItemCode" type="text">
+                                <select id="inputOrderItemCode" class="form-select">
+                                    <option selected>Item code</option>
+                                    <option>...</option>
+                                </select>
                             </div>
                             <div class="mt-3">
                                 <label class="form-label" for="txtItemName">Item Name:</label>
