@@ -19,7 +19,7 @@ customerValidations.push({
 customerValidations.push({
     reg: cusPhoneRegEx,
     field: $('#txtCusPn'),
-    error: 'Customer Phone number Pattern is Wrong : 077'
+    error: 'Customer Tp is a required field : Minimum 10 Numbers'
 });
 
 
