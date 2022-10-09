@@ -5,7 +5,6 @@ $("#orderContent").css("display", "none");
 
 $(".nav-item1").css("borderBottom", "2px solid gray")
 
-
 $(".nav-item1").click(function () {
     $("#homeContent").css("display", "block");
     $("#customerContent").css("display", "none");
