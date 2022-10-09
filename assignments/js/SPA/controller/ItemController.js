@@ -117,7 +117,7 @@ $('#txtSearchItemID').on('keydown', function (event) {
 
 /*btn item id search*/
 $("#btnSearchItem").click(function () {
-    let typedCode = $("#txtSearchCusID").val();
+    let typedCode = $("#txtSearchItemID").val();
     let item = searchItem(typedCode);
     if (item != null) {
         itemTextFieldValue(item.code, item.itemName, item.itemQty, item.price);
