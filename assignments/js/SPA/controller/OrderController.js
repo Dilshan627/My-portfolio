@@ -1,11 +1,11 @@
 /* ------ generate order id ------ */
 function generateOrderId() {
-    if(orders.length!=0){
-        var orderId= $("#orderId").val();
+    if (orders.length != 0) {
+        var orderId = $("#orderId").val();
         var tempId = parseInt(orderId.split("-")[1]);
-        tempId = tempId+1;
-        $("#orderId").val("O-00"+tempId);
-    }else{
+        tempId = tempId + 1;
+        $("#orderId").val("O-00" + tempId);
+    } else {
         $("#orderId").val("O-001");
     }
 }
@@ -26,7 +26,12 @@ function itemCodeOption() {
     }
 }
 
-/*
-$('#selectCustomerId>option').click(function () {
-   console.log( $('#selectCustomerId').val());
-});*/
+$('#selectCustomerId').click(function () {
+    let cusId = $('#selectCustomerId').val();
+
+    let customer = searchCustomer(cusId);
+    $('#txtName').val(customer.name);
+    $('#txtAddress').val(customer.address);
+    $('#txtContact').val(customer.number);
+
+});
