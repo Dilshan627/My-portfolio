@@ -3,6 +3,7 @@ const cusNameRegEx = /^[A-z ]{5,20}$/;
 const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
 const cusPhoneRegEx = /^[0-9/A-z. ,]{7,}$/;
 
+/*reagex add array*/
 let customerValidations = [];
 customerValidations.push({reg: cusIDRegEx, field: $('#txtCusID'), error: 'Customer ID Pattern is Wrong : C00-001'});
 customerValidations.push({
@@ -31,7 +32,7 @@ $('#txtCusID,#txtCusName,#txtCusAddress,#txtCusPn').on('keydown', function (even
 $('#txtCusID,#txtCusName,#txtCusAddress,#txtCusPn').on('keyup', function (event) {
     checkValidity();
 });
-
+/*key event focus*/
 $('#txtCusID').on('keydown', function (event) {
     if (event.key == "Enter" && check(cusIDRegEx, $('#txtCusID'))) {
         $('#txtCusName').focus();
@@ -56,6 +57,7 @@ $('#txtCusPn').on('keydown', function (event) {
     }
 });
 
+/*regex check*/
 function check(regex, txtField) {
     let inputValue = txtField.val();
     return regex.test(inputValue) ? true : false;
@@ -68,10 +70,11 @@ function clickEvent() {
         let address = $(this).children(":eq(2)").text();
         let number = $(this).children(":eq(3)").text();
 
-        customerTextFieldValue(id,name,address,number);
+        customerTextFieldValue(id, name, address, number);
     });
 }
 
+/*save customer*/
 $("#btnSaveCustomer").click(function () {
 
     let cusId = $("#txtCusID").val();
@@ -91,10 +94,59 @@ $("#btnSaveCustomer").click(function () {
     clearAllTexts();
 });
 
+/*textfield clear*/
 $('#btnClearCustomer').click(function () {
     clearAllTexts();
 });
 
+/*btn update*/
+$("#btnUpdateCustomer").click(function () {
+    let customerID = $("#txtCusID").val();
+    let response = updateCustomer(customerID);
+    if (response) {
+        alert("Customer Updated Successfully");
+        customerTextFieldValue("", "", "", "");
+    } else {
+        alert("Update Failed..!");
+
+    }
+});
+
+/*btn delete*/
+$("#btnDeleteCustomer").click(function () {
+    let deleteID = $("#txtCusID").val();
+
+    let option = confirm("Do you really want to delete customer id :" + deleteID);
+    if (option) {
+        if (deleteCustomer(deleteID)) {
+            // alert("Customer Successfully Deleted..");
+            customerTextFieldValue("", "", "", "");
+        } else {
+            alert("No such customer to delete. please check the id");
+        }
+    }
+});
+
+/*customer id search btn focus*/
+$('#txtSearchCusID').on('keydown', function (event) {
+    if (event.code == "Enter") {
+        $('#btnSearchCustomer').focus();
+    }
+})
+
+/*btn customer id search*/
+$("#btnSearchCustomer").click(function () {
+    let typedId = $("#txtSearchCusID").val();
+    let customer = searchCustomer(typedId);
+    if (customer != null) {
+        customerTextFieldValue(customer.id, customer.name, customer.address, customer.number);
+    } else {
+        alert("There is no cusotmer available for that " + typedId);
+        customerTextFieldValue("", "", "", "");
+    }
+});
+
+/*all crud function*/
 function loadCustomer() {
     $("#tblCustomer").empty();
     for (var customer of customers) {
@@ -105,7 +157,7 @@ function loadCustomer() {
 
 function clearAllTexts() {
     $("#txtCusID").focus();
-    $("#txtCusID,#txtCusName,#txtCusAddress,#txtCusPn").val("");
+    $("#txtCusID,#txtCusName,#txtCusAddress,#txtCusPn,#txtSearchCusID").val("");
 }
 
 function checkValidity() {
@@ -134,8 +186,7 @@ function textSuccess(txtField, error) {
     if (txtField.val().length <= 0) {
         defaultText(txtField, "");
     } else {
-        txtField.css('border', '2px solid green');
-        txtField.parent().children('span').text(error);
+        defaultText(txtField, "");
     }
 }
 
@@ -197,47 +248,6 @@ function updateCustomer(customerID) {
 
 }
 
-$("#btnUpdateCustomer").click(function () {
-    let customerID = $("#txtCusID").val();
-    let response = updateCustomer(customerID);
-    if (response) {
-        alert("Customer Updated Successfully");
-        customerTextFieldValue("", "", "", "");
-    } else {
-        alert("Update Failed..!");
 
-    }
-});
-
-$("#btnDeleteCustomer").click(function () {
-    let deleteID = $("#txtCusID").val();
-
-    let option = confirm("Do you really want to delete customer id :" + deleteID);
-    if (option){
-        if (deleteCustomer(deleteID)) {
-            // alert("Customer Successfully Deleted..");
-            customerTextFieldValue("", "", "", "");
-        } else {
-            alert("No such customer to delete. please check the id");
-        }
-    }
-});
-
-$('#txtSearchCusID').on('keydown',function (event) {
-    if (event.code == "Enter") {
-        $('#btnSearchCustomer').focus();
-    }
-})
-
-$("#btnSearchCustomer").click(function () {
-    let typedId = $("#txtSearchCusID").val();
-    let customer = searchCustomer(typedId);
-    if (customer != null) {
-        customerTextFieldValue(customer.id, customer.name, customer.address, customer.number);
-    } else {
-        alert("There is no cusotmer available for that " + typedId);
-        customerTextFieldValue("", "", "", "");
-    }
-});
 
 
