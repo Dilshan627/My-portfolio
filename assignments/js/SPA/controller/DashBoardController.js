@@ -58,4 +58,6 @@ $(".nav-item4").click(function () {
     $(".nav-item4").css("borderBottom", "2px solid gray")
 
     generateOrderId();
+    customerIdOption();
+    itemCodeOption();
 });

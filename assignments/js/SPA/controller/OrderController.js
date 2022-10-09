@@ -10,3 +10,15 @@ function generateOrderId() {
     }
 }
 
+function customerIdOption() {
+    $('#selectCustomerId').empty();
+    for (let cus of customers) {
+        $('#selectCustomerId').append(`<option>${cus.id}</option>`)
+    }
+}
+function itemCodeOption() {
+    $('#selectItemCode').empty();
+    for (let item of items) {
+        $('#selectItemCode').append(`<option>${item.code}</option>`)
+    }
+}

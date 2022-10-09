@@ -106,22 +106,22 @@
             <div class="mb-3">
                 <label class="form-label" for="txtCusID">Customer ID</label>
                 <input class="form-control" id="txtCusID" placeholder="Customer ID" type="text">
-                <span class="control-error" id="lblcusid"></span>
+                <span class="control-error"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtCusName">Customer Name</label>
                 <input class="form-control" id="txtCusName" placeholder="Customer Name" type="text">
-                <span class="control-error" id="lblcusname"></span>
+                <span class="control-error"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtCusAddress">Customer Address</label>
                 <input class="form-control" id="txtCusAddress" placeholder="Customer Address" type="text">
-                <span class="control-error" id="lblcusaddress"></span>
+                <span class="control-error"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtCusPn">phone number</label>
                 <input class="form-control" id="txtCusPn" placeholder="phone number" type="text">
-                <span class="control-error" id="lblcusphone"></span>
+                <span class="control-error"></span>
             </div>
 
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -183,18 +183,22 @@
             <div class="mb-3">
                 <label class="form-label" for="txtItemCode">Item Code</label>
                 <input class="form-control" id="txtItemCode" placeholder="Item Code" type="text">
+                <span class="control-error"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtItemName">Item Name</label>
                 <input class="form-control" id="txtItemName" placeholder="Item Name" type="text">
+                <span class="control-error"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtItemQty">Item Qty</label>
                 <input class="form-control" id="txtItemQty" placeholder="Item Qty" type="text">
+                <span class="control-error"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtItemPrice">Item Price</label>
                 <input class="form-control" id="txtItemPrice" placeholder="Item Price" type="text">
+                <span class="control-error"></span>
             </div>
 
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -264,8 +268,8 @@
                                 </div>
                             </div>
                             <div class="col-md-5">
-                                <label for="inputCustomer" class="form-label">Customer:</label>
-                                <select id="inputCustomer" class="form-select">
+                                <label for="selectCustomerId" class="form-label">Customer Id:</label>
+                                <select id="selectCustomerId" class="form-select">
                                     <option selected>customer Id</option>
                                     <option>...</option>
                                 </select>
@@ -292,20 +296,20 @@
                         <div class="card-header bg-secondary font-weight-bolder">Item</div>
                         <div class="card-body">
                             <div class="col-md-5">
-                                <label class="form-label" for="txtItemCode">Item Code:</label>
-                                <select id="inputOrderItemCode" class="form-select">
+                                <label class="form-label" for="selectItemCode">Item Code:</label>
+                                <select id="selectItemCode" class="form-select">
                                     <option selected>Item code</option>
                                     <option>...</option>
                                 </select>
                             </div>
                             <div class="mt-3">
                                 <label class="form-label" for="txtItemName">Item Name:</label>
-                                <input class="form-control" id="txtOrderItemName" type="text">
+                                <input class="form-control" id="txtOrderItemName" type="text" disabled>
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <label class="form-label" for="price">price:</label>
-                                    <input class="form-control" id="price" type="text">
+                                    <input class="form-control" id="price" type="text" disabled>
                                 </div>
                                 <div class="col">
                                     <label class="form-label" for="qty">Qty:</label>
