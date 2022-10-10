@@ -26,6 +26,7 @@ function itemCodeOption() {
     }
 }
 
+/*customer detail load*/
 $('#selectCustomerId').click(function () {
     let cusId = $('#selectCustomerId').val();
 
@@ -36,13 +37,39 @@ $('#selectCustomerId').click(function () {
 
 });
 
+/*item detail load*/
 $('#selectItemCode').click(function () {
-    let code =$('#selectItemCode').val();
-    let item =searchItem(code);
+    let code = $('#selectItemCode').val();
+    let item = searchItem(code);
 
     $('#txtOrderItemName').val(item.itemName);
     $('#qtyOnH').val(item.itemQty);
     $('#price').val(item.price);
 });
 
+$('#btnAdd').click(function () {
+    let orderItemCode = $("#txtItemCode").val();
+    let orderItemName = $("#txtItemName").val();
+    let orderItemQty = $("#txtItemQty").val();
+    let orderItemUnitPrice = $("#txtItemPrice").val();
+    let orderItemTotal = $("#txtItemPrice").val();
+
+    var order = {
+        "orderItemCode": orderItemCode,
+        "orderItemName": orderItemName,
+        "orderItemQty": orderItemQty,
+        "orderItemUnitPrice": orderItemUnitPrice,
+        "orderItemTotal": orderItemTotal
+    }
+    orders.push(order);
+    loadOrder();
+});
+
+function loadOrder() {
+    $("#orderTable").empty();
+    for (var order of orders) {
+        var row = `<tr><td>${order.orderItemCode}</td><td>${order.orderItemName}</td><td>${order.orderItemQty}</td><td>${order.orderItemUnitPrice}</td><td>${order.orderItemTotal}</td><td><input id='btnDelete' class='btn btn-danger btn-sm' value='Delete' style="width: 75px"/></td></tr>`;
+        $("#orderTable").append(row);
+    }
+}
 
