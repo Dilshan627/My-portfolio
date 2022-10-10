@@ -35,3 +35,14 @@ $('#selectCustomerId').click(function () {
     $('#txtContact').val(customer.number);
 
 });
+
+$('#selectItemCode').click(function () {
+    let code =$('#selectItemCode').val();
+    let item =searchItem(code);
+
+    $('#txtOrderItemName').val(item.itemName);
+    $('#qtyOnH').val(item.itemQty);
+    $('#price').val(item.price);
+});
+
+
