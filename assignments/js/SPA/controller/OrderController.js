@@ -48,27 +48,35 @@ $('#selectItemCode').click(function () {
 });
 
 $('#btnAdd').click(function () {
-    let orderItemCode = $("#txtItemCode").val();
-    let orderItemName = $("#txtItemName").val();
-    let orderItemQty = $("#txtItemQty").val();
-    let orderItemUnitPrice = $("#txtItemPrice").val();
-    let orderItemTotal = $("#txtItemPrice").val();
+    let orderItemCode = $("#selectItemCode").val();
+    let orderItemName = $("#txtOrderItemName").val();
+    let orderItemQty = $("#OrderQty").val();
+    let orderItemUnitPrice = $("#price").val();
+    let orderItemTotal = orderItemQty * orderItemUnitPrice;
 
     var order = {
-        "orderItemCode": orderItemCode,
-        "orderItemName": orderItemName,
-        "orderItemQty": orderItemQty,
-        "orderItemUnitPrice": orderItemUnitPrice,
-        "orderItemTotal": orderItemTotal
+        "orderCode": orderItemCode,
+        "orderName": orderItemName,
+        "orderQty": orderItemQty,
+        "orderUnitPrice": orderItemUnitPrice,
+        "orderTotal": orderItemTotal
     }
-    orders.push(order);
-    loadOrder();
+
+    if ($("#price").val().length <= 0) {
+        $('#selectItemCode').focus();
+    }  else if ($('#OrderQty').val().length <= 0){
+        $('#OrderQty').focus();
+    }else {
+        orders.push(order);
+        loadOrder();
+    }
 });
 
 function loadOrder() {
     $("#orderTable").empty();
     for (var order of orders) {
-        var row = `<tr><td>${order.orderItemCode}</td><td>${order.orderItemName}</td><td>${order.orderItemQty}</td><td>${order.orderItemUnitPrice}</td><td>${order.orderItemTotal}</td><td><input id='btnDelete' class='btn btn-danger btn-sm' value='Delete' style="width: 75px"/></td></tr>`;
+        var row = `<tr><td>${order.orderCode}</td><td>${order.orderName}</td><td>${order.orderQty}</td><td>${order.orderUnitPrice}</td><td>${order.orderTotal}</td><td><input id='btnDelete' class='btn btn-danger btn-sm' value='Delete' style="width: 75px"/></td></tr>`;
+
         $("#orderTable").append(row);
     }
 }
