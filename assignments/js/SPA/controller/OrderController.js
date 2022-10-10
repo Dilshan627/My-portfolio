@@ -66,23 +66,29 @@ $('#btnAdd').click(function () {
 
     if ($("#price").val().length <= 0) {
         $('#selectItemCode').focus();
-    }  else if ($('#OrderQty').val().length <= 0){
+    } else if (orderItemQty == 0) {
         $('#OrderQty').focus();
-    }else {
-       /* var orderItem = searchOrderItem(orderItemCode);
-        if (orderItem != null){
-            orderItem.orderCode=orderItemCode;
-            orderItem.orderName=orderItemName
-            orderItem.orderQty= orderItem.orderQty+orderItemQty;
-            orderItem.orderUnitPrice=orderItemUnitPrice;
-            orderItem.orderTotal= orderItem.orderTotal+orderItemTotal;
-            orders.push(orderItem);
-            loadOrder();
-        }else {*/
+    } else {
+        let i = searchOrderItem(orderItemCode);
 
+        if (i != null) {
+
+            let qty = parseInt(i.orderQty);
+            let tot = parseInt(i.orderTotal);
+
+            qty = qty + parseInt(orderItemQty);
+            tot = tot + parseInt(orderItemTotal);
+
+            i.orderQty = qty;
+            i.orderTotal = tot;
+            loadOrder();
+
+        } else {
+            console.log("add")
             orders.push(order);
             loadOrder();
-        //}
+        }
+
 
     }
 });
@@ -99,9 +105,24 @@ function loadOrder() {
 function searchOrderItem(code) {
     for (let order of orders) {
         if (order.orderCode == code) {
-            console.log(order)
             return order;
         }
     }
     return null;
 }
+
+function cardUpdate() {
+
+}
+
+/*
+function searchOrderItem(code) {
+
+    for (let i=0;i<orders.length;i++){
+        if (orders[i].orderCode == code) {
+            return i;
+        }
+    }
+    return null;
+
+}*/
