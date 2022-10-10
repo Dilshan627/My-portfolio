@@ -64,6 +64,12 @@ $('#btnAdd').click(function () {
         "orderTotal": orderItemTotal
     }
 
+    if ($('#qtyOnH').val() == 0) {
+        $('#btnAdd').attr('disabled', true);
+    } else {
+        $('#btnAdd').attr('disabled', false);
+    }
+
     if ($("#price").val().length <= 0) {
         $('#selectItemCode').focus();
     } else if (orderItemQty == 0) {
@@ -82,21 +88,52 @@ $('#btnAdd').click(function () {
             i.orderQty = qty;
             i.orderTotal = tot;
             loadOrder();
-
         } else {
-            console.log("add")
             orders.push(order);
             loadOrder();
+            deleteClockEvent();
         }
 
 
     }
 });
 
+
+/*$('#btnDelete').click(function () {
+    console.log("gg")
+});*/
+
+function deleteClockEvent() {
+    $('#orderTable>tr').click(function () {
+        let c =$(this).children(":eq(0)").text();
+        $('#orderTable>tr').children(":eq(5)").click(function () {
+          let del = $(this).children(":eq(0)").text();
+           cardItemDelete(c,del);
+        });
+    });
+}
+
+function cardItemDelete(code, val) {
+    if (val=="Delete"){
+        let order = searchOrderItem(code)
+        let indexNumber = orders.indexOf(order);
+        orders.splice(indexNumber, 1);
+        loadOrder();
+        return true;
+    } else {
+        return false;
+    }
+
+}
+
+
 function loadOrder() {
     $("#orderTable").empty();
     for (var order of orders) {
-        var row = `<tr><td>${order.orderCode}</td><td>${order.orderName}</td><td>${order.orderQty}</td><td>${order.orderUnitPrice}</td><td>${order.orderTotal}</td><td><input id='btnDelete' class='btn btn-danger btn-sm' value='Delete' style="width: 75px"/></td></tr>`;
+        var row = `<tr><td>${order.orderCode}</td><td>${order.orderName}</td><td>${order.orderQty}</td><td>${order.orderUnitPrice}</td><td>${order.orderTotal}</td><td>
+        <button type="button" class="btn btn-danger btn-sm" id="btnDelete">Delete</button></td></tr>`;
+
+        <!--<input id='btnDelete' class='btn btn-danger btn-sm' value='Delete' style="width: 75px"/>-->
 
         $("#orderTable").append(row);
     }
@@ -111,18 +148,3 @@ function searchOrderItem(code) {
     return null;
 }
 
-function cardUpdate() {
-
-}
-
-/*
-function searchOrderItem(code) {
-
-    for (let i=0;i<orders.length;i++){
-        if (orders[i].orderCode == code) {
-            return i;
-        }
-    }
-    return null;
-
-}*/
