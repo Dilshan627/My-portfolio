@@ -45,6 +45,8 @@ $('#selectItemCode').click(function () {
     $('#txtOrderItemName').val(item.itemName);
     $('#qtyOnH').val(item.itemQty);
     $('#price').val(item.price);
+
+    $('#OrderQty').val(" ");
 });
 
 $('#btnAdd').click(function () {
@@ -67,8 +69,21 @@ $('#btnAdd').click(function () {
     }  else if ($('#OrderQty').val().length <= 0){
         $('#OrderQty').focus();
     }else {
-        orders.push(order);
-        loadOrder();
+       /* var orderItem = searchOrderItem(orderItemCode);
+        if (orderItem != null){
+            orderItem.orderCode=orderItemCode;
+            orderItem.orderName=orderItemName
+            orderItem.orderQty= orderItem.orderQty+orderItemQty;
+            orderItem.orderUnitPrice=orderItemUnitPrice;
+            orderItem.orderTotal= orderItem.orderTotal+orderItemTotal;
+            orders.push(orderItem);
+            loadOrder();
+        }else {*/
+
+            orders.push(order);
+            loadOrder();
+        //}
+
     }
 });
 
@@ -81,3 +96,12 @@ function loadOrder() {
     }
 }
 
+function searchOrderItem(code) {
+    for (let order of orders) {
+        if (order.orderCode == code) {
+            console.log(order)
+            return order;
+        }
+    }
+    return null;
+}
