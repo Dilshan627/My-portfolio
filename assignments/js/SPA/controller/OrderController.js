@@ -103,10 +103,30 @@ $('#btnAdd').click(function () {
 
 
 $('#btnPurchase').click(function () {
-    purchase();
 
-    newOrder();
-    loadOrder();
+
+    let date = $('#orderDate').val();
+
+    if ($('#orderDate').val() == "") {
+        $('#orderDate').focus();
+    } else if ($('#selectCustomerId').val().length <= 0) {
+        $('#selectCustomerId').focus();
+    } else if ($('#txtCash').val().length <= 0) {
+        $('#txtCash').focus();
+    } else if ($('#txtDiscount').val().length <= 0) {
+        $('#txtDiscount').focus();
+    } else {
+        console.log("place")
+    }
+
+    /*if ($('#orderDate').val() == null){
+        $('#orderDate').focus();
+    }*/
+
+    /* purchase();
+
+     newOrder();
+     loadOrder();*/
 });
 
 $('#btnNew').click(function () {
@@ -130,24 +150,24 @@ function newOrder() {
 }
 
 function totalCount() {
-    let tot=0;
+    let tot = 0;
     for (let i = 0; i < orders.length; i++) {
-        tot=tot+orders[i].orderTotal.valueOf();
+        tot = tot + orders[i].orderTotal.valueOf();
         $('#orderTot').text(tot);
     }
 }
 
 function purchase() {
-    let oId =$('#orderId').val();
-    let cusId =$('#selectCustomerId').val();
-    let date =$('#orderDate').val();
-    let total =$('#orderTot').text();
+    let oId = $('#orderId').val();
+    let cusId = $('#selectCustomerId').val();
+    let date = $('#orderDate').val();
+    let total = $('#orderTot').text();
 
     var oDetails = {
         "oId": oId,
         "cusId": cusId,
         "date": date,
-        "total":total
+        "total": total
     }
 
     orderDetails.push(oDetails);
