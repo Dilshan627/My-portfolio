@@ -50,6 +50,7 @@ $('#selectItemCode').click(function () {
 });
 
 $('#btnAdd').click(function () {
+    let oId = $('#orderId').val();
     let orderItemCode = $("#selectItemCode").val();
     let orderItemName = $("#txtOrderItemName").val();
     let orderItemQty = $("#OrderQty").val();
@@ -57,6 +58,7 @@ $('#btnAdd').click(function () {
     let orderItemTotal = orderItemQty * orderItemUnitPrice;
 
     var order = {
+        "orderId": oId,
         "orderCode": orderItemCode,
         "orderName": orderItemName,
         "orderQty": orderItemQty,
@@ -88,10 +90,11 @@ $('#btnAdd').click(function () {
             i.orderQty = qty;
             i.orderTotal = tot;
             loadOrder();
+            totalCount();
         } else {
             orders.push(order);
             loadOrder();
-            deleteClockEvent();
+            totalCount();
         }
 
 
@@ -99,11 +102,64 @@ $('#btnAdd').click(function () {
 });
 
 
+$('#btnPurchase').click(function () {
+    purchase();
+
+    newOrder();
+    loadOrder();
+});
+
+$('#btnNew').click(function () {
+    newOrder();
+});
+
+function newOrder() {
+    generateOrderId();
+
+    $('#selectCustomerId').val(" ");
+    $('#txtName').val(" ");
+    $('#txtContact').val(" ");
+    $('#txtAddress').val(" ");
+    $('#selectItemCode').val(" ");
+    $('#txtOrderItemName').val(" ");
+    $('#qtyOnH').val(" ");
+    $('#price').val(" ");
+    $('#OrderQty').val(" ");
+
+    orders.length = 0;
+}
+
+function totalCount() {
+    let tot=0;
+    for (let i = 0; i < orders.length; i++) {
+        tot=tot+orders[i].orderTotal.valueOf();
+        $('#orderTot').text(tot);
+    }
+}
+
+function purchase() {
+    let oId =$('#orderId').val();
+    let cusId =$('#selectCustomerId').val();
+    let date =$('#orderDate').val();
+    let total =$('#orderTot').text();
+
+    var oDetails = {
+        "oId": oId,
+        "cusId": cusId,
+        "date": date,
+        "total":total
+    }
+
+    orderDetails.push(oDetails);
+
+}
+
+
 /*$('#btnDelete').click(function () {
     console.log("gg")
 });*/
 
-function deleteClockEvent() {
+/*function deleteClockEvent() {
     $('#orderTable>tr').click(function () {
         let c =$(this).children(":eq(0)").text();
         $('#orderTable>tr').children(":eq(5)").click(function () {
@@ -111,8 +167,9 @@ function deleteClockEvent() {
            cardItemDelete(c,del);
         });
     });
-}
+}*/
 
+/*
 function cardItemDelete(code, val) {
     if (val=="Delete"){
         let order = searchOrderItem(code)
@@ -125,6 +182,7 @@ function cardItemDelete(code, val) {
     }
 
 }
+*/
 
 
 function loadOrder() {
