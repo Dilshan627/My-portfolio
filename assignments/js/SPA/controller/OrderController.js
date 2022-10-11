@@ -101,27 +101,22 @@ $('#btnAdd').click(function () {
     }
 });
 
-
 $('#btnPurchase').click(function () {
 
-
-    let date = $('#orderDate').val();
-
-    if ($('#orderDate').val() == "") {
-        $('#orderDate').focus();
-    } else if ($('#selectCustomerId').val().length <= 0) {
-        $('#selectCustomerId').focus();
-    } else if ($('#txtCash').val().length <= 0) {
-        $('#txtCash').focus();
-    } else if ($('#txtDiscount').val().length <= 0) {
-        $('#txtDiscount').focus();
-    } else {
-        purchase();
-        newOrder();
-        loadOrder();
-    }
-
-
+      if ($('#orderDate').val() == "") {
+          $('#orderDate').focus();
+      } else if ($('#selectCustomerId').val().length <= 0) {
+          $('#selectCustomerId').focus();
+      } else if ($('#txtCash').val().length <= 0) {
+          $('#txtCash').focus();
+      } else if ($('#txtDiscount').val().length <= 0) {
+          $('#txtDiscount').focus();
+      } else {
+          alert("order purchase success")
+          purchase();
+          balanceOrder();
+          loadOrder();
+      }
 });
 
 $('#btnNew').click(function () {
@@ -170,7 +165,15 @@ function purchase() {
 }
 
 function balanceOrder() {
-    
+    var t = parseInt($('#orderTot').text());
+    let cash = parseInt($('#txtCash').val());
+    let discount = parseInt($('#txtDiscount').val());
+
+    let z = t * discount / 100;
+
+    t = t - z;
+
+    $('#txtBalance').val(cash - t);
 }
 
 /*add button event focus*/
@@ -224,7 +227,6 @@ function cardItemDelete(code, val) {
 
 }
 */
-
 
 function loadOrder() {
     $("#orderTable").empty();
