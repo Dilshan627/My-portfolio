@@ -15,6 +15,7 @@ $(".nav-item1").click(function () {
     $(".nav-item2").css("borderBottom", "none")
     $(".nav-item3").css("borderBottom", "none")
     $(".nav-item4").css("borderBottom", "none")
+    count();
 });
 
 $(".nav-item2").click(function () {
@@ -59,4 +60,11 @@ $(".nav-item4").click(function () {
     generateOrderId();
     customerIdOption();
     itemCodeOption();
+    defaultFocus();
 });
+
+function count() {
+    $("#customerCount").text(customers.length);
+    $("#itemCount").text(items.length);
+    $("#orderCount").text(orderDetails.length);
+}

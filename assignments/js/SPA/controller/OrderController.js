@@ -116,17 +116,12 @@ $('#btnPurchase').click(function () {
     } else if ($('#txtDiscount').val().length <= 0) {
         $('#txtDiscount').focus();
     } else {
-        console.log("place")
+        purchase();
+        newOrder();
+        loadOrder();
     }
 
-    /*if ($('#orderDate').val() == null){
-        $('#orderDate').focus();
-    }*/
 
-    /* purchase();
-
-     newOrder();
-     loadOrder();*/
 });
 
 $('#btnNew').click(function () {
@@ -174,6 +169,32 @@ function purchase() {
 
 }
 
+function balanceOrder() {
+    
+}
+
+/*add button event focus*/
+$('#OrderQty').on('keydown', function (event) {
+    if (event.key == "Enter") {
+        $('#btnAdd').focus();
+    }
+});
+
+$('#txtCash').on('keydown', function (event) {
+    if (event.key == "Enter") {
+        $('#txtDiscount').focus();
+    }
+});
+
+$('#txtDiscount').on('keydown', function (event) {
+    if (event.key == "Enter") {
+        $('#btnPurchase').focus();
+    }
+});
+
+function defaultFocus() {
+    $('#selectCustomerId').focus();
+}
 
 /*$('#btnDelete').click(function () {
     console.log("gg")
