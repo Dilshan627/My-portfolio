@@ -44,6 +44,7 @@ $(".nav-item3").click(function () {
     $(".nav-item4").css("borderBottom", "none")
 
     itemClearAllTexts();
+    loadItem();
 });
 
 $(".nav-item4").click(function () {

@@ -1,6 +1,6 @@
 /* ------ generate order id ------ */
 function generateOrderId() {
-    if (orders.length != 0) {
+    if (orderDetails.length != 0) {
         var orderId = $("#orderId").val();
         var tempId = parseInt(orderId.split("-")[1]);
         tempId = tempId + 1;
@@ -118,6 +118,7 @@ $('#btnPurchase').click(function () {
         purchase();
         balanceOrder();
         loadOrder();
+        itemCountSet();
     }
 });
 
@@ -147,7 +148,14 @@ function newOrder() {
     $('#price').val(" ");
     $('#OrderQty').val(" ");
 
+    $('#orderTot').text(" ");
+    $('#oSubTot').text(" ");
+    $('#txtCash').val(" ");
+    $('#txtDiscount').val(" ");
+    $('#txtBalance').val(" ");
+
     orders.length = 0;
+    loadOrder();
 }
 
 function totalCount() {
@@ -247,5 +255,18 @@ function deleteObject(code) {
         totalCount();
     } else {
         return false;
+    }
+}
+
+function itemCountSet() {
+    for (let i=0;i<orders.length;i++){
+        for (let j=0;j<items.length;j++){
+            if (orders[i].orderCode == items[j].code){
+                let uQty =parseInt(items[j].itemQty);
+                let oQty =parseInt(orders[i].orderQty);
+                uQty=uQty-oQty;
+                items[j].itemQty=uQty;
+            }
+        }
     }
 }
