@@ -47,6 +47,8 @@ $('#selectItemCode').click(function () {
     $('#price').val(item.price);
 
     $('#OrderQty').val(" ");
+
+    qtyOnHandCheck();
 });
 
 $('#btnAdd').click(function () {
@@ -122,6 +124,15 @@ $('#btnPurchase').click(function () {
 $('#btnNew').click(function () {
     newOrder();
 });
+
+function qtyOnHandCheck() {
+    let qoh=$('#qtyOnH').val();
+    if (qoh == 0){
+        $("#btnAdd").attr('disabled', true);
+    }else {
+        $("#btnAdd").attr('disabled', false);
+    }
+}
 
 function newOrder() {
     generateOrderId();
