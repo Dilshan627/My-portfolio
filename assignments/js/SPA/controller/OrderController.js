@@ -107,7 +107,7 @@ $('#btnPurchase').click(function () {
 
       if ($('#orderDate').val() == "") {
           $('#orderDate').focus();
-      } else if ($('#selectCustomerId').val().length <= 0) {
+      } else if ($('#txtName').val().length <= 0) {
           $('#selectCustomerId').focus();
       } else if ($('#txtCash').val().length <= 0) {
           $('#txtCash').focus();
@@ -183,7 +183,7 @@ function balanceOrder() {
     let z = t * discount / 100;
 
     t = t - z;
-
+    $('#oSubTot').text(t);
     $('#txtBalance').val(cash - t);
 }
 
