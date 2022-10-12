@@ -1,7 +1,7 @@
 var itemCodeRegEx = /^(I00-)[0-9]{1,3}$/;
 var itemNameRegEx = /^[A-z ]{4,}$/;
-var itemUnitPriceRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
-var itemQtyOnHandRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+var itemUnitPriceRegEx = /^[0-9]{1,}$/;
+var itemQtyOnHandRegEx = /^[0-9]{1,}$/;
 
 /*array regex and filed add*/
 let itemValidations = [];

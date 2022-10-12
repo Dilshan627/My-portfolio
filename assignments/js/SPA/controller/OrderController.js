@@ -105,20 +105,20 @@ $('#btnAdd').click(function () {
 
 $('#btnPurchase').click(function () {
 
-      if ($('#orderDate').val() == "") {
-          $('#orderDate').focus();
-      } else if ($('#txtName').val().length <= 0) {
-          $('#selectCustomerId').focus();
-      } else if ($('#txtCash').val().length <= 0) {
-          $('#txtCash').focus();
-      } else if ($('#txtDiscount').val().length <= 0) {
-          $('#txtDiscount').focus();
-      } else {
-          alert("order purchase success")
-          purchase();
-          balanceOrder();
-          loadOrder();
-      }
+    if ($('#orderDate').val() == "") {
+        $('#orderDate').focus();
+    } else if ($('#txtName').val().length <= 0) {
+        $('#selectCustomerId').focus();
+    } else if ($('#txtCash').val().length <= 0) {
+        $('#txtCash').focus();
+    } else if ($('#txtDiscount').val().length <= 0) {
+        $('#txtDiscount').focus();
+    } else {
+        alert("order purchase success")
+        purchase();
+        balanceOrder();
+        loadOrder();
+    }
 });
 
 $('#btnNew').click(function () {
@@ -126,10 +126,10 @@ $('#btnNew').click(function () {
 });
 
 function qtyOnHandCheck() {
-    let qoh=$('#qtyOnH').val();
-    if (qoh == 0){
+    let qoh = $('#qtyOnH').val();
+    if (qoh == 0) {
         $("#btnAdd").attr('disabled', true);
-    }else {
+    } else {
         $("#btnAdd").attr('disabled', false);
     }
 }
@@ -210,45 +210,14 @@ function defaultFocus() {
     $('#selectCustomerId').focus();
 }
 
-/*$('#btnDelete').click(function () {
-    console.log("gg")
-});*/
-
-/*function deleteClockEvent() {
-    $('#orderTable>tr').click(function () {
-        let c =$(this).children(":eq(0)").text();
-        $('#orderTable>tr').children(":eq(5)").click(function () {
-          let del = $(this).children(":eq(0)").text();
-           cardItemDelete(c,del);
-        });
-    });
-}*/
-
-/*
-function cardItemDelete(code, val) {
-    if (val=="Delete"){
-        let order = searchOrderItem(code)
-        let indexNumber = orders.indexOf(order);
-        orders.splice(indexNumber, 1);
-        loadOrder();
-        return true;
-    } else {
-        return false;
-    }
-
-}
-*/
-
 function loadOrder() {
     $("#orderTable").empty();
     for (var order of orders) {
         var row = `<tr><td>${order.orderCode}</td><td>${order.orderName}</td><td>${order.orderQty}</td><td>${order.orderUnitPrice}</td><td>${order.orderTotal}</td><td>
         <button type="button" class="btn btn-danger btn-sm" id="btnDelete">Delete</button></td></tr>`;
-
-        <!--<input id='btnDelete' class='btn btn-danger btn-sm' value='Delete' style="width: 75px"/>-->
-
         $("#orderTable").append(row);
     }
+    bindDeleteEvent();
 }
 
 function searchOrderItem(code) {
@@ -260,3 +229,23 @@ function searchOrderItem(code) {
     return null;
 }
 
+function bindDeleteEvent() {
+    $("#btnDelete").on("click", function () {
+        var code = $(this).parent().parent().children(":eq(0)").text();
+        console.log(code);
+        deleteObject(code);
+        loadOrder();
+    });
+}
+
+function deleteObject(code) {
+    let Item = searchOrderItem(code);
+    if (Item != null) {
+        let indexNumber = orders.indexOf(Item);
+        orders.splice(indexNumber, 1);
+        return true;
+        totalCount();
+    } else {
+        return false;
+    }
+}

@@ -1,7 +1,8 @@
 const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
 const cusNameRegEx = /^[A-z ]{5,20}$/;
 const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
-const cusPhoneRegEx = /^[0-9/A-z. ,]{7,}$/;
+const cusPhoneRegEx = /^[0]{1}[7]{1}[01245678]{1}[0-9]{7}$/;
+
 
 /*reagex add array*/
 let customerValidations = [];
