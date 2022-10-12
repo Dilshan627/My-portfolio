@@ -160,9 +160,13 @@ function newOrder() {
 
 function totalCount() {
     let tot = 0;
-    for (let i = 0; i < orders.length; i++) {
-        tot = tot + orders[i].orderTotal.valueOf();
-        $('#orderTot').text(tot);
+    if (orders.length ==0){
+        $('#orderTot').text(" ");
+    }else {
+        for (let i = 0; i < orders.length; i++) {
+            tot = tot + orders[i].orderTotal.valueOf();
+            $('#orderTot').text(tot);
+        }
     }
 }
 
@@ -221,8 +225,7 @@ function defaultFocus() {
 function loadOrder() {
     $("#orderTable").empty();
     for (var order of orders) {
-        var row = `<tr><td>${order.orderCode}</td><td>${order.orderName}</td><td>${order.orderQty}</td><td>${order.orderUnitPrice}</td><td>${order.orderTotal}</td><td>
-        <button type="button" class="btn btn-danger btn-sm" id="btnDelete">Delete</button></td></tr>`;
+        var row = `<tr><td>${order.orderCode}</td><td>${order.orderName}</td><td>${order.orderQty}</td><td>${order.orderUnitPrice}</td><td>${order.orderTotal}</td></tr>`;
         $("#orderTable").append(row);
     }
     bindDeleteEvent();
@@ -238,11 +241,12 @@ function searchOrderItem(code) {
 }
 
 function bindDeleteEvent() {
-    $("#btnDelete").on("click", function () {
-        var code = $(this).parent().parent().children(":eq(0)").text();
-        console.log(code);
-        deleteObject(code);
-        loadOrder();
+    $('#orderTable>tr').on('dblclick',function (){
+        let code= $(this).children(":eq(0)").text();
+         deleteObject(code);
+         console.log(code);
+         loadOrder();
+       /* $(this).remove();*/
     });
 }
 
@@ -251,8 +255,8 @@ function deleteObject(code) {
     if (Item != null) {
         let indexNumber = orders.indexOf(Item);
         orders.splice(indexNumber, 1);
-        return true;
         totalCount();
+        return true;
     } else {
         return false;
     }
