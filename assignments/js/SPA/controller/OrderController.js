@@ -119,8 +119,22 @@ $('#btnPurchase').click(function () {
         balanceOrder();
         loadOrder();
         itemCountSet();
+        copyArray();
     }
 });
+function copyArray() {
+    for (let i = 0; i < orders.length; i++) {
+        order = {
+            "orderId": orders[i].orderId,
+            "orderCode": orders[i].orderCode,
+            "orderName": orders[i].orderName,
+            "orderQty": orders[i].orderQty,
+            "orderUnitPrice": orders[i].orderUnitPrice,
+            "orderTotal": orders[i].orderTotal
+        }
+        allDetails.push(order);
+    }
+}
 
 $('#btnNew').click(function () {
     newOrder();
@@ -154,15 +168,18 @@ function newOrder() {
     $('#txtDiscount').val(" ");
     $('#txtBalance').val(" ");
 
+
+
+
     orders.length = 0;
     loadOrder();
 }
 
 function totalCount() {
     let tot = 0;
-    if (orders.length ==0){
+    if (orders.length == 0) {
         $('#orderTot').text(" ");
-    }else {
+    } else {
         for (let i = 0; i < orders.length; i++) {
             tot = tot + orders[i].orderTotal.valueOf();
             $('#orderTot').text(tot);
@@ -241,12 +258,12 @@ function searchOrderItem(code) {
 }
 
 function bindDeleteEvent() {
-    $('#orderTable>tr').on('dblclick',function (){
-        let code= $(this).children(":eq(0)").text();
-         deleteObject(code);
-         console.log(code);
-         loadOrder();
-       /* $(this).remove();*/
+    $('#orderTable>tr').on('dblclick', function () {
+        let code = $(this).children(":eq(0)").text();
+        deleteObject(code);
+        console.log(code);
+        loadOrder();
+        /* $(this).remove();*/
     });
 }
 
@@ -263,14 +280,52 @@ function deleteObject(code) {
 }
 
 function itemCountSet() {
-    for (let i=0;i<orders.length;i++){
-        for (let j=0;j<items.length;j++){
-            if (orders[i].orderCode == items[j].code){
-                let uQty =parseInt(items[j].itemQty);
-                let oQty =parseInt(orders[i].orderQty);
-                uQty=uQty-oQty;
-                items[j].itemQty=uQty;
+    for (let i = 0; i < orders.length; i++) {
+        for (let j = 0; j < items.length; j++) {
+            if (orders[i].orderCode == items[j].code) {
+                let uQty = parseInt(items[j].itemQty);
+                let oQty = parseInt(orders[i].orderQty);
+                uQty = uQty - oQty;
+                items[j].itemQty = uQty;
             }
         }
     }
 }
+
+const oIDRegEx = /^(O-)[0-9]{1,3}$/;
+
+$('#orderId').on('keydown', function (event) {
+
+    if (checkOId(oIDRegEx, $('#orderId'))) {
+        $('#oidSpan').css('border', '1px solid #ced4da');
+        $('#oidSpan').text(" ");
+
+        if (event.key == "Enter") {
+            let Oid = $('#orderId').val();
+
+            allOrderSearch(Oid);
+            loadOrder();
+        }
+    } else {
+        $('#oidSpan').css('border', '2px solid red');
+        $('#oidSpan').text("Order ID Pattern is Wrong : O-001");
+    }
+});
+
+function checkOId(regex, txtField) {
+    let inputValue = txtField.val();
+    return regex.test(inputValue) ? true : false;
+}
+
+function allOrderSearch(Id) {
+    orders.length = 0;
+    for (let i=0;i<allDetails.length;i++){
+
+        if (Id==allDetails[i].orderId){
+            let order=allDetails[i];
+            orders.push(order);
+        }
+
+    }
+}
+
