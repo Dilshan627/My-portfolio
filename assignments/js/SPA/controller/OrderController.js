@@ -168,8 +168,7 @@ function newOrder() {
     $('#txtDiscount').val(" ");
     $('#txtBalance').val(" ");
 
-
-
+    $('#orderDate').val(" ");
 
     orders.length = 0;
     loadOrder();
@@ -305,6 +304,7 @@ $('#orderId').on('keydown', function (event) {
 
             allOrderSearch(Oid);
             loadOrder();
+            setCustomer(Oid);
         }
     } else {
         $('#oidSpan').css('border', '2px solid red');
@@ -329,3 +329,13 @@ function allOrderSearch(Id) {
     }
 }
 
+function setCustomer(Oid) {
+    for (let i=0;i<orderDetails.length;i++){
+        if (Oid == orderDetails[i].oId){
+            $('#orderId').val(orderDetails[i].oId);
+            $('#selectCustomerId').val(orderDetails[i].cusId);
+            $('#orderDate').val(orderDetails[i].date);
+            $('#orderTot').text(orderDetails[i].total);
+        }
+    }
+}
