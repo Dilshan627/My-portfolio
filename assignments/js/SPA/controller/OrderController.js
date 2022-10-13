@@ -1,7 +1,8 @@
 /* ------ generate order id ------ */
 function generateOrderId() {
     if (orderDetails.length != 0) {
-        var orderId = $("#orderId").val();
+        let i=orderDetails.length-1;
+        var orderId = orderDetails[i].oId;
         var tempId = parseInt(orderId.split("-")[1]);
         tempId = tempId + 1;
         $("#orderId").val("O-00" + tempId);
@@ -122,6 +123,7 @@ $('#btnPurchase').click(function () {
         copyArray();
     }
 });
+
 function copyArray() {
     for (let i = 0; i < orders.length; i++) {
         order = {
@@ -324,6 +326,8 @@ function allOrderSearch(Id) {
         if (Id==allDetails[i].orderId){
             let order=allDetails[i];
             orders.push(order);
+        }else {
+            alert("Wrong order ID");
         }
 
     }
@@ -332,8 +336,12 @@ function allOrderSearch(Id) {
 function setCustomer(Oid) {
     for (let i=0;i<orderDetails.length;i++){
         if (Oid == orderDetails[i].oId){
-            $('#orderId').val(orderDetails[i].oId);
-            $('#selectCustomerId').val(orderDetails[i].cusId);
+            let id =orderDetails[i].cusId;
+            let customer = searchCustomer(id);
+            $('#txtName').val(customer.name);
+            $('#txtAddress').val(customer.address);
+            $('#txtContact').val(customer.number);
+            $('#selectCustomerId').val(id);
             $('#orderDate').val(orderDetails[i].date);
             $('#orderTot').text(orderDetails[i].total);
         }
