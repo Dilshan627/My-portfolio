@@ -319,6 +319,7 @@ function checkOId(regex, txtField) {
     return regex.test(inputValue) ? true : false;
 }
 
+/*order search*/
 function allOrderSearch(Id) {
     orders.length = 0;
     for (let i=0;i<allDetails.length;i++){
@@ -333,6 +334,7 @@ function allOrderSearch(Id) {
     }
 }
 
+/*customer order name set*/
 function setCustomer(Oid) {
     for (let i=0;i<orderDetails.length;i++){
         if (Oid == orderDetails[i].oId){
