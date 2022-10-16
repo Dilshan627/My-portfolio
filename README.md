@@ -18,8 +18,6 @@
 
 #### <a href="https://dilshan627.github.io/My-portfolio">GitHub Pages URL</a>
 
-#### <a href="http://dilshan.42web.io">Infinity Host URL</a>
-
 ##### Developed By Damitha Dilshan
 
 <br><br>
