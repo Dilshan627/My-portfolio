@@ -217,7 +217,7 @@ function customerTextFieldValue(id, name, address, number) {
 
 function searchCustomer(cusID) {
     for (let customer of customers) {
-        if (customer.id == cusID) {
+        if (customer.getCusId() == cusID) {
             return customer;
         }
     }
@@ -240,10 +240,10 @@ function deleteCustomer(customerID) {
 function updateCustomer(customerID) {
     let customer = searchCustomer(customerID);
     if (customer != null) {
-        customer.id = $("#txtCusID").val();
-        customer.name = $("#txtCusName").val();
-        customer.address = $("#txtCusAddress").val();
-        customer.number = $("#txtCusPn").val();
+        customer.setCusId($("#txtCusID").val());
+        customer.setCusName($("#txtCusName").val());
+        customer.setCusAddress($("#txtCusAddress").val());
+        customer.setCusPhone($("#txtCusPn").val());
         loadCustomer();
         clickEvent();
         return true;
