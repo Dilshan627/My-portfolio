@@ -78,18 +78,22 @@ function clickEvent() {
 /*save customer*/
 $("#btnSaveCustomer").click(function () {
 
-    let cusId = $("#txtCusID").val();
+   /* let cusId = $("#txtCusID").val();
     let cusName = $("#txtCusName").val();
     let cusAddress = $("#txtCusAddress").val();
     let cusPhone = $("#txtCusPn").val();
-
-    var customer = {
+*/
+   /* var customer = {
         "id": cusId,
         "name": cusName,
         "address": cusAddress,
         "number": cusPhone
-    }
+    }*/
+
+    let customer =new Customer($("#txtCusID").val(),$("#txtCusName").val(),$("#txtCusAddress").val(),$("#txtCusPn").val());
+
     customers.push(customer);
+
     loadCustomer();
     clickEvent();
     clearAllTexts();
@@ -151,7 +155,7 @@ $("#btnSearchCustomer").click(function () {
 function loadCustomer() {
     $("#tblCustomer").empty();
     for (var customer of customers) {
-        var row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.number}</td></tr>`;
+        var row = `<tr><td>${customer.getCusId()}</td><td>${customer.getCusName()}</td><td>${customer.getCusAddress()}</td><td>${customer.getCusPhone()}</td></tr>`;
         $("#tblCustomer").append(row);
     }
 }
