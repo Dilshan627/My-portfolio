@@ -7,6 +7,8 @@ let jumpAnimationNumber = 0;
 let moveBackgroundAnimation = 0;
 let imagePositionX = 0;
 let marginTop = 660;
+var marginLeftGo =78;
+var marginLeftBack =marginLeftGo;
 
 window.addEventListener("load", function () {
     // document.querySelector('.load').style.display = 'none';
@@ -90,6 +92,8 @@ function jumpAnimationStart() {
 function keyCheck(event) {
     var keyCode = event.which;
 
+    console.log(keyCode);
+
     if (keyCode == 13) {
         if (runAnimationNumber == 0) {
             runAnimationStart();
@@ -108,6 +112,28 @@ function keyCheck(event) {
             moveBackgroundAnimation = setInterval(moveBackground, 100);
         }
     }
+
+    if (keyCode == 100) {
+
+        forWord();
+    }
+    if (keyCode == 97) {
+
+        backWord();
+    }
+}
+
+
+function forWord() {
+    marginLeftGo = marginLeftGo + 2;
+
+    document.getElementById("character").style.marginLeft=marginLeftGo+"px";
+}
+
+function backWord() {
+    marginLeftBack = marginLeftBack - 2;
+
+    document.getElementById("character").style.marginLeft=marginLeftBack+"px";
 }
 
 function moveBackground() {
