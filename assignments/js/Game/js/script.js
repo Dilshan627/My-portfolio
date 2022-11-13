@@ -1,4 +1,3 @@
-var man = document.getElementById("character");
 let number = 0;
 let animateNumber = 0;
 let runImageNumber = 0;
@@ -9,8 +8,14 @@ let moveBackgroundAnimation = 0;
 let imagePositionX = 0;
 let marginTop = 660;
 
+window.addEventListener("load", function () {
+    animateManStart();
+    barriers();
+    ring();
+});
 
 document.addEventListener("keypress", keyCheck);
+var man = document.getElementById("character");
 
 
 function animateMan() {
@@ -91,13 +96,17 @@ function keyCheck(event) {
             moveBackgroundAnimation = setInterval(moveBackground, 100);
         }
     }
+}
+
+function moveBackground() {
+    imagePositionX = imagePositionX - 20;
+    document.getElementById("bg").style.backgroundPositionX = imagePositionX + "px";
+}
+
+function barriers() {
 
 }
 
+function ring() {
 
-function moveBackground() {
-
-    imagePositionX = imagePositionX - 20;
-
-    document.getElementById("bg").style.backgroundPositionX = imagePositionX + "px";
 }
