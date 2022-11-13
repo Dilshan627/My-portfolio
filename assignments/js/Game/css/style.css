@@ -7,6 +7,7 @@
     height: 100vh;
     background-image: url("../assets/background/rsz_41524.jpg");
     background-size: cover;
+    background-repeat: repeat-x;
 }
 
 .background>img{
