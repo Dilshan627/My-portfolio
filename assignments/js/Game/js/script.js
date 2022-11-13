@@ -16,7 +16,9 @@ window.addEventListener("load", function () {
      ring();*/
 
 });
+
 document.getElementById("btnPlay").focus();
+
 document.getElementById("btnPlay").addEventListener("click", function () {
     document.querySelector('.play').style.display = 'none';
 
