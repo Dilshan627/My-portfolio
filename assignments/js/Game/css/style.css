@@ -51,3 +51,10 @@
     margin-top: 41rem;
     margin-left: 4rem;
 }
+
+.barrier{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+}

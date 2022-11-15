@@ -139,7 +139,9 @@ function moveBackground() {
 }
 
 function barriers() {
-
+    var barriers=document.createElement("div");
+    barriers.className="barrier";
+    document.getElementById("bg").appendChild(barriers);
 }
 
 function ring() {
