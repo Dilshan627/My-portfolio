@@ -14,13 +14,16 @@ document.getElementById("btnPlay").addEventListener("click", function () {
     character1Start();
     character2Start();
 
+    document.addEventListener("keypress", keyCheck);
+
+
 });
 
 
 var c1Number = 0;
-var c1startNumber;
+var c1startNumber = 0;
 var c2Number = 0;
-var c2startNumber;
+var c2startNumber = 0;
 
 var c1 = document.getElementById("character1");
 var c2 = document.getElementById("character2");
@@ -49,8 +52,47 @@ function character2Start() {
     c2startNumber = setInterval(character2, 200);
 }
 
+let c1RunImageNumber = 0;
+let c1RunAnimationNumber = 0;
 
-
-function keyboard() {
-
+function c1Run() {
+    c1RunImageNumber = c1RunImageNumber + 1;
+    if (c1RunImageNumber == 10) {
+        c1RunImageNumber = 0;
+    }
+    c1.src = "assets/ninjaadventurenew/png/Run__00" + c1RunImageNumber + ".png";
 }
+
+
+
+function keyCheck(event) {
+    var keyCode = event.which;
+
+    if (keyCode == 100) {
+        c1Run();
+    }
+    if (keyCode == 97) {
+    }
+}
+
+
+
+/*
+var c1Run = 0;
+
+function c1Run() {
+    // if (c1Run <= 1718) {
+    //     c1Run = c1Run + 3;
+    //     document.getElementById("character1").style.marginLeft = c1Run + "px";
+    // }
+    console.log("1")
+}
+
+function c1Back() {
+    // if (c1Run >= -20) {
+    //     c1Run = c1Run - 4;
+    //     document.getElementById("character1").style.marginLeft = c1Run + "px";
+    // }
+
+
+}*/
