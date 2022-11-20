@@ -21,8 +21,14 @@ document.getElementById("btnPlay").addEventListener("click", function () {
 
     character1Start();
     character2Start();
+    display();
     document.addEventListener("keypress", keyCheck);
 });
+
+function display() {
+    $(".lifeLineBoy").css("display", "block");
+    $(".lifeLineGirl").css("display", "block");
+}
 
 var c1 = document.getElementById("character1");
 var c2 = document.getElementById("character2");
@@ -62,7 +68,7 @@ function c1Run() {
     c1.src = "assets/ninjaadventurenew/png/Run__00" + c1RunImageNumber + ".png";
 
     if (c1RunX <= 716) {
-        c1RunX = c1RunX + 6;
+        c1RunX = c1RunX + 10;
         document.getElementById("character1").style.marginLeft = c1RunX + "px";
     }
 }
@@ -75,7 +81,7 @@ function c1Back() {
     c1.src = "assets/ninjaadventurenew/png/Run__00" + c1RunImageNumber + ".png";
 
     if (c1RunX >= 10) {
-        c1RunX = c1RunX - 6;
+        c1RunX = c1RunX - 10;
         document.getElementById("character1").style.marginLeft = c1RunX + "px";
     }
 }
@@ -88,7 +94,7 @@ function c2Run() {
     c2.src = "assets/ninjagirlnew/png/Run__00" + c2RunImageNumber + ".png";
 
     if (c2RunX <= 716) {
-        c2RunX = c2RunX + 6;
+        c2RunX = c2RunX + 10;
         document.getElementById("character2").style.marginRight = c2RunX + "px";
     }
 }
@@ -101,7 +107,7 @@ function c2Back() {
     c2.src = "assets/ninjagirlnew/png/Run__00" + c2RunImageNumber + ".png";
 
     if (c2RunX >= 10) {
-        c2RunX = c2RunX - 6;
+        c2RunX = c2RunX - 10;
         document.getElementById("character2").style.marginRight = c2RunX + "px";
     }
 }
@@ -124,13 +130,13 @@ function keyCheck(event) {
         c2Back();
     }
     if (keyCode == 101) {
-        c1AttackStart();
+        c1Attack();
     }
     if (keyCode == 55) {
-        c2AttackStart();
+        c2Attack();
     }
     if (keyCode == 119) {
-        c1SlideStart();
+        //c1SlideStart();
     }
     if (keyCode == 50) {
 
@@ -138,52 +144,39 @@ function keyCheck(event) {
 }
 
 let c1AttackX = 0;
-let c1AttackStartX = 0;
 
 let c2AttackX = 0;
-let c2AttackStartX = 0;
 
 function c1Attack() {
-    c1AttackX=c1AttackX+1;
+    c1AttackX = c1AttackX + 1;
     if (c1AttackX == 10) {
-       clearInterval(c1AttackStartX);
-        c1AttackStartX=1;
-       c1AttackX = 0;
+        c1AttackX = 0;
     }
     c1.src = "assets/ninjaadventurenew/png/Attack__00" + c1AttackX + ".png";
 }
 
-function c1AttackStart() {
-    c1AttackStartX = setInterval(c1Attack, 100);
-}
-
 function c2Attack() {
-    c2AttackX=c2AttackX+1;
-
+    c2AttackX = c2AttackX + 1;
     if (c2AttackX == 10) {
-        clearInterval(c2AttackStartX);
-        c2AttackStartX=1;
         c2AttackX = 0;
     }
     c2.src = "assets/ninjagirlnew/png/Attack__00" + c2AttackX + ".png";
 }
 
-function c2AttackStart() {
-    c2AttackStartX = setInterval(c2Attack, 100);
-}
 
 let c1SlideX = 0;
 let c1SlideStartX = 0;
 
 function c1Slide() {
-    c1SlideX=c1SlideX+1;
+    c1SlideX = c1SlideX + 1;
     if (c1SlideX == 10) {
         clearInterval(c1SlideStartX);
-        c1SlideStartX=1;
+        c1SlideStartX = 1;
         c1SlideX = 0;
     }
     c1.src = "assets/ninjaadventurenew/png/Slide__00" + c1SlideX + ".png";
 }
+
 function c1SlideStart() {
     c1SlideStartX = setInterval(c1Slide, 100);
 }

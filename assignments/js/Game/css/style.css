@@ -63,5 +63,33 @@
     right: 50px;
 }
 
+.lifeLineBoy{
+    position: absolute;
+    height: 34px;
+    width: 200px;
+    background-color: red;
+    z-index: 5;
+    top: 125px;
+    left: 25px;
+    border-radius: 25px;
+    display: none;
+    font-size: 22px;
+    color: wheat;
+    text-align: center;
+}
 
+.lifeLineGirl{
+    position: absolute;
+    height: 34px;
+    width: 200px;
+    background-color: red;
+    z-index: 5;
+    top: 125px;
+    right: 25px;
+    border-radius: 25px;
+    display: none;
+    font-size: 22px;
+    color: wheat;
+    text-align: center;
+}
 
