@@ -61,7 +61,7 @@ function c1Run() {
     }
     c1.src = "assets/ninjaadventurenew/png/Run__00" + c1RunImageNumber + ".png";
 
-    if (c1RunX <= 1500) {
+    if (c1RunX <= 716) {
         c1RunX = c1RunX + 6;
         document.getElementById("character1").style.marginLeft = c1RunX + "px";
     }
@@ -87,7 +87,7 @@ function c2Run() {
     }
     c2.src = "assets/ninjagirlnew/png/Run__00" + c2RunImageNumber + ".png";
 
-    if (c2RunX <= 1500) {
+    if (c2RunX <= 716) {
         c2RunX = c2RunX + 6;
         document.getElementById("character2").style.marginRight = c2RunX + "px";
     }
