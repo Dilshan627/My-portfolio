@@ -22,13 +22,9 @@ document.getElementById("btnPlay").focus();
 document.getElementById("btnPlay").addEventListener("click", function () {
     document.querySelector('.play').style.display = 'none';
 
-    animateManStart();
-    barriers();
-    ring();
 
-    document.addEventListener("keypress", keyCheck);
 });
 
 
-var man = document.getElementById("character");
+var man = document.getElementById("character1");
 

@@ -48,3 +48,15 @@
     position: absolute;
 }
 
+#character1 {
+    margin-top: 525px;
+    height: 300px;
+}
+
+#character2 {
+    transform: scaleX(-1);
+    height: 320px;
+    margin-top: 500px;
+}
+
+
