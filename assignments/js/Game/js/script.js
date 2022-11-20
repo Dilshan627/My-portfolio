@@ -62,11 +62,11 @@ function jumpAnimation() {
     jumpImageNumber = jumpImageNumber + 1;
 
     if (jumpImageNumber <= 6) {
-        marginTop = marginTop - 20;
+        marginTop = marginTop - 35;
         man.style.marginTop = marginTop + "px";
     }
     if (jumpImageNumber >= 7) {
-        marginTop = marginTop + 20;
+        marginTop = marginTop + 35;
         man.style.marginTop = marginTop + "px";
     }
 
@@ -100,6 +100,9 @@ function keyCheck(event) {
         if (moveBackgroundAnimation == 0) {
             moveBackgroundAnimation = setInterval(moveBackground, 100);
         }
+        if (barrierAnimationId == 0) {
+            barrierAnimationId = setInterval(barrierAnimation, 100);
+        }
     }
     if (keyCode == 32) {
         if (jumpImageNumber == 1) {
@@ -108,6 +111,9 @@ function keyCheck(event) {
         if (moveBackgroundAnimation == 0) {
             moveBackgroundAnimation = setInterval(moveBackground, 100);
         }
+    }
+    if (barrierAnimationId == 0) {
+        barrierAnimationId = setInterval(barrierAnimation, 100);
     }
 
     if (keyCode == 100) {
@@ -138,11 +144,40 @@ function moveBackground() {
     document.getElementById("bg").style.backgroundPositionX = imagePositionX + "px";
 }
 
+marginleft = 500;
+
 function barriers() {
-    var barriers=document.createElement("div");
-    barriers.className="barrier";
-    document.getElementById("bg").appendChild(barriers);
+
+    for (var i = 0; i < 10; i++) {
+        var barriers = document.createElement("div");
+        barriers.className = "barrier";
+        document.getElementById("death").appendChild(barriers);
+        barriers.style.marginLeft = marginleft + "px";
+
+        barriers.id="barrier"+i;
+
+        let number1 = Math.floor(Math.random() * 1500) + 800;
+
+        marginleft = marginleft + number1;
+
+
+    }
+
 }
+
+var barrierAnimationId=0;
+function barrierAnimation() {
+    for (var i=0;i<10;i++){
+        var barrier=document.getElementById("barrier"+i);
+        var currentmarginleft=getComputedStyle(barrier).marginLeft;
+        var newMLeft=parseInt(currentmarginleft)-25;
+
+        barrier.style.marginLeft=newMLeft+"px";
+    }
+}
+
+
+
 
 function ring() {
 
