@@ -1,3 +1,10 @@
+var c1Number = 0;
+var c1startNumber = 0;
+var c2Number = 0;
+var c2startNumber = 0;
+var c1RunImageNumber = 0;
+var c1RunX = 50;
+
 /*window.addEventListener("load", function () {
     // document.querySelector('.load').style.display = 'none';
     /!* animateManStart();
@@ -16,14 +23,7 @@ document.getElementById("btnPlay").addEventListener("click", function () {
 
     document.addEventListener("keypress", keyCheck);
 
-
 });
-
-
-var c1Number = 0;
-var c1startNumber = 0;
-var c2Number = 0;
-var c2startNumber = 0;
 
 var c1 = document.getElementById("character1");
 var c2 = document.getElementById("character2");
@@ -52,47 +52,43 @@ function character2Start() {
     c2startNumber = setInterval(character2, 200);
 }
 
-let c1RunImageNumber = 0;
-let c1RunAnimationNumber = 0;
-
 function c1Run() {
     c1RunImageNumber = c1RunImageNumber + 1;
     if (c1RunImageNumber == 10) {
         c1RunImageNumber = 0;
     }
     c1.src = "assets/ninjaadventurenew/png/Run__00" + c1RunImageNumber + ".png";
+
+    if (c1RunX <= 1500) {
+        c1RunX = c1RunX + 6;
+        document.getElementById("character1").style.marginLeft = c1RunX + "px";
+    }
 }
 
+function c1Back() {
+    c1RunImageNumber = c1RunImageNumber + 1;
+    if (c1RunImageNumber == 10) {
+        c1RunImageNumber = 0;
+    }
+    c1.src = "assets/ninjaadventurenew/png/Run__00" + c1RunImageNumber + ".png";
 
+    if (c1RunX >= 10) {
+        c1RunX = c1RunX - 6;
+        document.getElementById("character1").style.marginLeft = c1RunX + "px";
+    }
+}
 
 function keyCheck(event) {
     var keyCode = event.which;
 
     if (keyCode == 100) {
         c1Run();
+        console.log(keyCode);
     }
     if (keyCode == 97) {
+        c1Back();
+       console.log(keyCode);
+
     }
 }
 
-
-
-/*
-var c1Run = 0;
-
-function c1Run() {
-    // if (c1Run <= 1718) {
-    //     c1Run = c1Run + 3;
-    //     document.getElementById("character1").style.marginLeft = c1Run + "px";
-    // }
-    console.log("1")
-}
-
-function c1Back() {
-    // if (c1Run >= -20) {
-    //     c1Run = c1Run - 4;
-    //     document.getElementById("character1").style.marginLeft = c1Run + "px";
-    // }
-
-
-}*/
