@@ -166,7 +166,6 @@ function c2Attack() {
     c2.src = "assets/ninjagirlnew/png/Attack__00" + c2AttackX + ".png";
 }
 
-
 let lifeLineBoy = 200;
 let lifeLineGirl = 200;
 
@@ -177,7 +176,12 @@ function boyLife() {
     }
     if (lifeLineGirl == 0) {
         girlDeath();
+        boyWin();
     }
+}
+
+function boyWin() {
+    $(".play").css("display", "block");
 }
 
 function girlDeath() {
@@ -207,5 +211,11 @@ function girlLife() {
     }
     if (lifeLineBoy == 0) {
         boyDeath();
+        girlWin();
     }
+}
+
+function girlWin() {
+    $(".play").css("display", "block");
+
 }
