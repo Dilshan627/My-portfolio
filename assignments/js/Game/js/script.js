@@ -113,27 +113,27 @@ function keyCheck(event) {
 
     if (keyCode == 100) {
         c1Run();
-        console.log(keyCode);
     }
     if (keyCode == 97) {
         c1Back();
-       console.log(keyCode);
     }
     if (keyCode == 52) {
         c2Run();
-        console.log(keyCode);
     }
     if (keyCode == 54) {
         c2Back();
-        console.log(keyCode);
     }
     if (keyCode == 101) {
         c1AttackStart();
-        console.log(keyCode);
     }
     if (keyCode == 55) {
         c2AttackStart();
-        console.log(keyCode);
+    }
+    if (keyCode == 119) {
+        c1SlideStart();
+    }
+    if (keyCode == 50) {
+
     }
 }
 
@@ -170,4 +170,20 @@ function c2Attack() {
 
 function c2AttackStart() {
     c2AttackStartX = setInterval(c2Attack, 100);
+}
+
+let c1SlideX = 0;
+let c1SlideStartX = 0;
+
+function c1Slide() {
+    c1SlideX=c1SlideX+1;
+    if (c1SlideX == 10) {
+        clearInterval(c1SlideStartX);
+        c1SlideStartX=1;
+        c1SlideX = 0;
+    }
+    c1.src = "assets/ninjaadventurenew/png/Slide__00" + c1SlideX + ".png";
+}
+function c1SlideStart() {
+    c1SlideStartX = setInterval(c1Slide, 100);
 }
