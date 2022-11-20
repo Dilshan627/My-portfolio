@@ -119,6 +119,7 @@ function keyCheck(event) {
 
     if (keyCode == 100) {
         c1Run();
+
     }
     if (keyCode == 97) {
         c1Back();
@@ -131,9 +132,11 @@ function keyCheck(event) {
     }
     if (keyCode == 101) {
         c1Attack();
+        boyLife();
     }
     if (keyCode == 55) {
         c2Attack();
+        girlLife();
     }
     if (keyCode == 119) {
         //c1SlideStart();
@@ -144,7 +147,6 @@ function keyCheck(event) {
 }
 
 let c1AttackX = 0;
-
 let c2AttackX = 0;
 
 function c1Attack() {
@@ -164,19 +166,20 @@ function c2Attack() {
 }
 
 
-let c1SlideX = 0;
-let c1SlideStartX = 0;
+let lifeLineBoy = 200;
+let lifeLineGirl = 200;
 
-function c1Slide() {
-    c1SlideX = c1SlideX + 1;
-    if (c1SlideX == 10) {
-        clearInterval(c1SlideStartX);
-        c1SlideStartX = 1;
-        c1SlideX = 0;
+function boyLife() {
+    if (c1RunX >= 700 && c2RunX >= 700) {
+        lifeLineBoy = lifeLineBoy - 20;
+        $(".lifeLineGirl").css("width", lifeLineBoy);
     }
-    c1.src = "assets/ninjaadventurenew/png/Slide__00" + c1SlideX + ".png";
 }
 
-function c1SlideStart() {
-    c1SlideStartX = setInterval(c1Slide, 100);
+function girlLife() {
+    if (c1RunX >= 700 && c2RunX >= 700) {
+        lifeLineGirl = lifeLineGirl - 20;
+        $(".lifeLineBoy").css("width", lifeLineGirl);
+    }
 }
+
