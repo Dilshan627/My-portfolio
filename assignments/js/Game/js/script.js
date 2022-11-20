@@ -172,15 +172,40 @@ let lifeLineGirl = 200;
 
 function boyLife() {
     if (c1RunX >= 700 && c2RunX >= 700) {
-        lifeLineBoy = lifeLineBoy - 20;
-        $(".lifeLineGirl").css("width", lifeLineBoy);
+        lifeLineGirl = lifeLineGirl - 20;
+        $(".lifeLineGirl").css("width", lifeLineGirl);
+    }
+    if (lifeLineGirl == 0) {
+        girlDeath();
+    }
+}
+
+function girlDeath() {
+    clearInterval(c2startNumber);
+    c2startNumber = 1;
+    if (lifeLineGirl === 0) {
+        for (let i = 0; i < 10; i++) {
+            c2.src = "assets/ninjagirlnew/png/Dead__00" + i + ".png";
+        }
+    }
+}
+
+function boyDeath() {
+    clearInterval(c1startNumber);
+    c1startNumber = 1;
+    if (lifeLineBoy === 0) {
+        for (let i = 0; i < 10; i++) {
+            c1.src = "assets/ninjaadventurenew/png/Dead__00" + i + ".png";
+        }
     }
 }
 
 function girlLife() {
     if (c1RunX >= 700 && c2RunX >= 700) {
-        lifeLineGirl = lifeLineGirl - 20;
-        $(".lifeLineBoy").css("width", lifeLineGirl);
+        lifeLineBoy = lifeLineBoy - 20;
+        $(".lifeLineBoy").css("width", lifeLineBoy);
+    }
+    if (lifeLineBoy == 0) {
+        boyDeath();
     }
 }
-
