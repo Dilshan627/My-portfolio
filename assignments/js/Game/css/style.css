@@ -48,19 +48,3 @@
     position: absolute;
 }
 
-.background > img {
-    height: 260px;
-    width: 200px;
-    margin-top: 41rem;
-    margin-left: 4rem;
-}
-
-.barrier {
-    width: 60px;
-    height: 60px;
-    background-image: url("../assets/deadimage/DeadBush.png");
-    position: absolute;
-    margin-top: 53.5rem;
-    background-size: cover;
-    background-position: center;
-}
