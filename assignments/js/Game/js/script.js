@@ -49,3 +49,8 @@ function character2Start() {
     c2startNumber = setInterval(character2, 200);
 }
 
+
+
+function keyboard() {
+
+}
