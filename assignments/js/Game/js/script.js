@@ -28,6 +28,7 @@ document.getElementById("btnPlay").addEventListener("click", function () {
 function display() {
     $(".lifeLineBoy").css("display", "block");
     $(".lifeLineGirl").css("display", "block");
+    $(".vs").css("display", "block");
 }
 
 var c1 = document.getElementById("character1");

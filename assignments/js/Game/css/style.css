@@ -93,3 +93,12 @@
     text-align: center;
 }
 
+.vs{
+    position: absolute;
+    color: red;
+    z-index: 5;
+    top: 125px;
+    font-size: 70px;
+    left: 48%;
+    display: none;
+}
