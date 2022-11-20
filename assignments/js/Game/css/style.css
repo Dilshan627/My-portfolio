@@ -51,13 +51,17 @@
 #character1 {
     margin-top: 525px;
     height: 300px;
-    margin-left: 50px;
+    left: 50px;
+    position: absolute;
 }
 
 #character2 {
+    position: absolute;
     transform: scaleX(-1);
     height: 320px;
     margin-top: 500px;
+    right: 50px;
 }
+
 
 
