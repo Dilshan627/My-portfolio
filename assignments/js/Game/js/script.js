@@ -6,6 +6,8 @@ var c1RunImageNumber = 0;
 var c1RunX = 50;
 var c2RunImageNumber = 0;
 var c2RunX = 50;
+let lifeLineBoy = 200;
+let lifeLineGirl = 200;
 /*window.addEventListener("load", function () {
     // document.querySelector('.load').style.display = 'none';
     /!* animateManStart();
@@ -17,8 +19,20 @@ var c2RunX = 50;
 document.getElementById("btnPlay").focus();
 
 document.getElementById("btnPlay").addEventListener("click", function () {
-    document.querySelector('.play').style.display = 'none';
 
+    c1RunX = 50;
+    c2RunX = 50;
+
+    $(".lifeLineGirl").css("width", 200);
+    $(".lifeLineBoy").css("width", 200);
+
+
+    c1Run();
+    c2Run();
+
+
+
+    document.querySelector('.play').style.display = 'none';
     character1Start();
     character2Start();
     display();
@@ -166,9 +180,6 @@ function c2Attack() {
     c2.src = "assets/ninjagirlnew/png/Attack__00" + c2AttackX + ".png";
 }
 
-let lifeLineBoy = 200;
-let lifeLineGirl = 200;
-
 function boyLife() {
     if (c1RunX >= 700 && c2RunX >= 700) {
         lifeLineGirl = lifeLineGirl - 20;
@@ -217,5 +228,4 @@ function girlLife() {
 
 function girlWin() {
     $(".play").css("display", "block");
-
 }
